@@ -1,41 +1,24 @@
 import React from 'react';
 
 import './contactInformation.css';
+import ContactInfo from '../../generics/ContactInfo';
 
 const contactInformation = () => {
+    const contactBoxes = [
+        { iconClass: "fa-sharp fa-solid fa-circle-location-arrow", title: "Visit Us", desciption: "Sveavägen 31", secondDescription: "111 34 Stockholm" },
+        { iconClass: "fa-solid fa-circle-phone", title: "Call Us", desciption: "+46 (8) 121 470 50", secondDescription: "+46 (8) 121 470 51" },
+        { iconClass: "fa-sharp fa-solid fa-circle-envelope", title: "Email Us", desciption: "info@crito.com", secondDescription: "support@crito.com" },
+    ];
+
     return (
         <section className="contact-information">
             <div className="container">
-                <div className="information">
-                    <div className="icon">
-                        <i className="fa-sharp fa-solid fa-circle-location-arrow"></i>
-                    </div>
-                    <div className="info-text">
-                        <h3>Visit Us</h3>
-                        <p>Sveavägen 31</p>
-                        <p>111 34 Stockholm</p>
-                    </div>
-                </div>
-                <div className="information">
-                    <div className="icon">
-                        <i className="fa-solid fa-circle-phone"></i>
-                    </div>
-                    <div className="info-text">
-                        <h3>Call Us</h3>
-                        <p>+46 (8) 121 470 50</p>
-                        <p>+46 (8) 121 470 51</p>
-                    </div>
-                </div>
-                <div className="information">
-                    <div className="icon">
-                        <i className="fa-sharp fa-solid fa-circle-envelope"></i>
-                    </div>
-                    <div className="info-text">
-                        <h3>Email Us</h3>
-                        <p>info@crito.com</p>
-                        <p>support@crito.com</p>
-                    </div>
-                </div>
+
+                {
+                    contactBoxes.map((contactBox, index) =>
+                    <ContactInfo key={index} iconClass={contactBox.iconClass} title={contactBox.title} desciption={contactBox.desciption} secondDescription={contactBox.secondDescription}     />)
+                }
+
             </div>
         </section>
     )

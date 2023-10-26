@@ -21,7 +21,7 @@ const BrandsBox = () => {
         <div className="brands-box container">
             {
                 brands.map((brand, index) => (
-                    <Brand key={ index } img={ brand.img } altText={brand.altText} />
+                    <Brand key={ index } img={ brand.img } altText={ brand.altText } />
                 ))
             }
         </div>

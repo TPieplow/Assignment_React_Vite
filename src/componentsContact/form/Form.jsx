@@ -2,13 +2,17 @@ import React from 'react';
 
 import './Form.css';
 
+const text = ( <>
+    Leave us a message <br /> for any information
+</>)
+
 const Form = () => {
     return (
         <section className="form-section">
             <div className="container">
                 <form action="#" method="POST">
                     <div className="title">
-                        <h2>Leave us a message for any information.</h2>
+                        <h2>{text}</h2>
                     </div>
                     <input type="text" id="name" placeholder="Name*" name="name" title="Enter your name" required autoComplete="off" tabIndex="1" />
                     <input type="email" id="email" placeholder="Email*" name="email" title="Enter your email" required autoComplete="off" tabIndex="2" />

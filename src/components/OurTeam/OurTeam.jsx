@@ -1,10 +1,9 @@
 import React from 'react';
-
 import './OurTeam.css';
-
 
 import Button from '#button';
 import SectionTitle from '#sectiontitle';
+import Team from '../../generics/Team';
 
 import img_kristinePalmer from '#images/kristine_palmer.png';
 import img_markAubri from '#images/mark_aubri.png';
@@ -13,6 +12,12 @@ import img_justinWilloman from '#images/justin-willoman.png';
 
 
 const OurTeam = () => {
+    const team = [
+        { img: img_kristinePalmer, name: "Kristine Palmer", jobTitle: "Chef Operation Officer" },
+        { img: img_markAubri, name: "Mark Aubri", jobTitle: "Senior Consultant" },
+        { img: img_kimberlyHansen, name: "Kimberly Hansen", jobTitle: "Senior Consultant" },
+        { img: img_justinWilloman, name: "Justin Willowman", jobTitle: "Senior Tech Consultant" },
+    ];
     return (
         <section className="our-team">
             <div className="container">
@@ -21,34 +26,13 @@ const OurTeam = () => {
                     <Button type="yellow" text="Browse Team" url="/team" />
                 </div>
                 <div className="team">
-                    <div className="member member1">
-                        <img src={img_kristinePalmer} alt="Kristine Palmer - COO" loading="lazy" />
-                        <div className="member-info">
-                            <h4>Kristine Palmer</h4>
-                            <p>Chef Operation Officer</p>
-                        </div>
-                    </div>
-                    <div className="member member2">
-                        <img src={img_markAubri} alt="Mark Aubri - Senior Consultant" loading="lazy" />
-                        <div className="member-info">
-                            <h4>Mark Aubri</h4>
-                            <p>Senior Consultant</p>
-                        </div>
-                    </div>
-                    <div className="member member3">
-                        <img src={img_kimberlyHansen} alt="Kimberly Hansen - Senior Consultant" loading="lazy" />
-                        <div className="member-info">
-                            <h4>Kimberly Hasen</h4>
-                            <p>Senior Consultant</p>
-                        </div>
-                    </div>
-                    <div className="member member4">
-                        <img src={img_justinWilloman} alt="Justin Willowman - Senior Tech Consultant" loading="lazy" />
-                        <div className="member-info">
-                            <h4>Justin Willowman</h4>
-                            <p>Senior Tech Consultant</p>
-                        </div>
-                    </div>
+
+                    {
+                        team.map((teamMember, index) => (
+                            <Team key={ index } img={ teamMember.img } name={ teamMember.name } jobTitle={ teamMember.jobTitle } />
+                        )) 
+                    }
+                   
                 </div>
                 <div className="ring-container">
                     <div className="ring"></div>

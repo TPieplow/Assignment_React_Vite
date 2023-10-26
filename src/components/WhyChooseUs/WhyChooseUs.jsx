@@ -3,9 +3,17 @@ import './WhyChooseUs.css';
 
 import img_talkingwomen from '#images/two_women-talking.png'
 import SectionTitle from '#sectiontitle';
+import Strengths from '../../generics/strengths';
 
 
 const WhyChooseUs = () => {
+    const strenghts = [
+        { iconClass: "fa-light fa-thumbs-up", title: "Process Excellence", description: "Lorem ipsum dolor sit amet consectetur." },
+        { iconClass: "fa-duotone fa-chess", title: "Strategic Planning", description: "Lorem ipsum dolor sit amet consectetur." },
+        { iconClass: "fa-light fa-pen-nib", title: "Experience Design", description: "Lorem ipsum dolor sit amet consectetur." },
+        { iconClass: "fa-light fa-head-side-gear", title: "Artificial Intelligence", description: "Lorem ipsum dolor sit amet consectetur." },
+    ];
+
   return (
     <section className="why-choose-us">
 <div className="gray-div"></div>
@@ -13,42 +21,12 @@ const WhyChooseUs = () => {
     <div className="choose-us">
         <SectionTitle title="Why Choose Us" description="Why We Are The Best Business Consulting Agency" />
         <div className="strengths">
-            <div className="process-wrapper">
-                <div className="icon-wrapper">
-                    <i className="fa-light fa-thumbs-up"></i>
-                </div>
-                <div className="text-wrapper">
-                    <h3>Process Excellence</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-            </div>
-            <div className="process-wrapper">
-                <div className="icon-wrapper">
-                    <i className="fa-duotone fa-chess"></i>
-                </div>
-                <div className="text-wrapper">
-                    <h3>Strategic Planning</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-            </div>
-            <div className="process-wrapper">
-                <div className="icon-wrapper">
-                    <i className="fa-light fa-pen-nib"></i>
-                </div>
-                <div className="text-wrapper">
-                    <h3>Experience Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-            </div>
-            <div className="process-wrapper">
-                <div className="icon-wrapper">
-                    <i className="fa-light fa-head-side-gear"></i>
-                </div>
-                <div className="text-wrapper">
-                    <h3>Artificial Intelligence</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-            </div>
+
+        {
+            strenghts.map((strenght, index) =>
+            <Strengths key={index} iconClass={strenght.iconClass} title={strenght.title} description={strenght.description} />)
+        }
+        
         </div>
     </div>
     <div className="why-image">

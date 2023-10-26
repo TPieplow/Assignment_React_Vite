@@ -1,6 +1,7 @@
 import React from 'react'
-import './Navigation.css'
+import { NavLink } from 'react-router-dom';
 
+import './Navigation.css'
 import Button from '#button'
 
 import img_logotype from '#images/logo_crito.svg'
@@ -36,10 +37,10 @@ const Navigation = () => {
           </div>
           <div className="main-menu">
             <nav>
-              <a className="/active" href="index.html">Home</a>
-              <a href="/services.html">Service</a>
-              <a href="/news.html">News</a>
-              <a href="/contact">Contact</a>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/services">Service</NavLink>
+              <NavLink to="/news">News</NavLink>
+              <NavLink to="/Contact">Contact</NavLink>
             </nav>
             <Button type="yellow" text="Login" url="/login" />
           </div>

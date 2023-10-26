@@ -22,12 +22,10 @@ function App() {
     <div className="wrapper">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Outlet />}>
-            <Route index element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/news" element={<News />} />
             <Route path="/newsDetails" element={<NewsDetails />} />
-          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

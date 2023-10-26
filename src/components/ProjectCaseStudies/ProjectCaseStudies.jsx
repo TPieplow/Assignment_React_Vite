@@ -7,8 +7,15 @@ import img_manWithNewsPaper from '#images/man_with_a_newspaper.png';
 import img_tabletGlasses from '#images/tablet-glasses.png';
 import img_notebook from '#images/notebook.png';
 import img_laptop from '#images/laptop.png';
+import Projects from '../../generics/Projects';
 
 const ProjectCaseStudies = () => {
+    const projects = [
+        { img: img_manWithNewsPaper, title: "Grow Your Business", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
+        { img: img_tabletGlasses, title: "Why Your Clients Needs A Responsive Website", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
+        { img: img_notebook, title: "Educate Your Employees To Get Better Results", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
+        { img: img_laptop, title: "Business Insights Is A Important Piece Of Your Business", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
+    ];
     return (
         <section className="project">
             <div className="container">
@@ -17,26 +24,12 @@ const ProjectCaseStudies = () => {
                     <h2>Let's Look At Our Global Projects</h2>
                 </div>
                 <div className="project-cases">
-                    <a className="articles" href="#">
-                        <img src={img_manWithNewsPaper} alt="man_with_a_newspaper" loading="lazy" />
-                        <h3>Grow your business</h3>
-                        <div className="read-more">Read More <i className="fa-regular fa-arrow-up-right"></i></div>
-                    </a>
-                    <a className="articles" href="#">
-                        <img src={img_tabletGlasses} alt="tablet_glasses_marker_watch" loading="lazy" />
-                        <h3>Why your clients needs a responsive website</h3>
-                        <div className="read-more">Read More <i className="fa-regular fa-arrow-up-right"></i></div>
-                    </a>
-                    <a className="articles" href="#">
-                        <img src={img_notebook} alt="notebook_and_cup" loading="lazy" />
-                        <h3>Educate your employees to get better results</h3>
-                        <div className="read-more">Read More <i className="fa-regular fa-arrow-up-right"></i></div>
-                    </a>
-                    <a className="articles" href="#">
-                        <img src={img_laptop} alt="laptop showing data" loading="lazy" />
-                        <h3>Business insights is an important piece of your business</h3>
-                        <div className="read-more">Read More <i className="fa-regular fa-arrow-up-right"></i></div>
-                    </a>
+                    {
+                        projects.map((project, index) => (
+                            <Projects key={index} img={project.img} title={project.title} description={project.description} iconClass={project.iconClass} />
+                        ))
+                    }
+
                 </div>
                 <div className="btn-box">
                     <Button type="dark" text="All Recent Projects" />
