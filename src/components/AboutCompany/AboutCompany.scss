@@ -1,0 +1,129 @@
+.about {
+    margin-top: 120px;
+    
+    .container {
+        @media (min-width: 1200px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-right: 50px;
+        }
+        
+        .position-relative {
+            position: relative;
+            text-align: center; 
+            margin: 0 auto; 
+            max-width: 100%; 
+            
+            @media (max-width: 576px) {
+                display: none;
+            }
+            
+            .image-box {
+                position: relative;
+                
+                @media (min-width: 992px) and  (max-width: 1200px) {
+                    margin-bottom: -150px;
+                }
+                
+                
+                .pen-stroke {
+                    position: absolute;
+                    top: 38px;
+                    left: -30px;
+                    
+                    @media (min-width: 768px) {
+                        position: relative;
+                        top: 140px; 
+                        left: -186px; 
+                    }
+                    
+                    
+                    @media (min-width: 1200px) {
+                        position: absolute;
+                        top: 38px;
+                        left: -30px;
+                    }
+                }
+                
+                .sam-info {
+                    background-color: #BEEBFF;
+                    position: absolute;
+                    top: 396px;
+                    left: -58px;
+                    width: 370px;
+                    height: 180px;
+                    padding-top: 40px;
+                    padding-bottom: 60px;
+                    padding-left: 24px;
+                    
+                    @media (min-width: 768px) {
+                        position: absolute;
+                        top: 500px; 
+                        left: 22px; 
+                    }
+                    
+                    @media (min-width: 1200px) {
+                        position: absolute;
+                        top: 396px;
+                        left: -58px;
+                    }
+                    
+                    h3 {
+                        font-family: 'DM Sans' sans-serif;
+                        font-size: 22px;
+                        font-weight: 700;
+                        
+                        .founder-text {
+                            font-family: 'DM Sans', sans-serif;
+                            color: #F94D1C;
+                            font-size: 16px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .about-company {
+        text-align: center;
+        margin-top: 80px;
+        
+        @media (min-width: 992px) {
+            margin-top: 240px;
+        }
+        
+        @media (min-width: 1200px) {
+            margin: 0;
+            margin-left: 80px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @media (min-width: 1400px) {
+            margin-left: 85px;
+        }
+        
+        .section-title {
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        
+        .text {
+            margin-bottom: 85px;
+            
+            p{
+                margin-bottom: 30px;
+                line-height: 2;
+            }
+        }
+        
+        .btn-box {
+            @media (min-width: 1200px) {
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+    }
+}

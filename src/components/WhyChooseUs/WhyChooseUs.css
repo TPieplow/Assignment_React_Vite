@@ -1,0 +1,106 @@
+.why-choose-us {
+  overflow-x: hidden;
+  position: relative;
+}
+.why-choose-us .gray-div {
+  display: none;
+  position: absolute;
+  background-color: #F0EFE9;
+  width: 54%;
+  height: 60%;
+  bottom: 25px;
+  right: 0;
+  max-width: 100%;
+}
+@media (min-width: 1200px) {
+  .why-choose-us .gray-div {
+    display: inline-block;
+  }
+}
+.why-choose-us .container {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  z-index: 0;
+}
+@media (min-width: 1200px) {
+  .why-choose-us .container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .why-choose-us .container .choose-us {
+    margin-right: 50px;
+  }
+}
+@media (min-width: 1400px) {
+  .why-choose-us .container .choose-us {
+    margin-right: 215px;
+  }
+}
+@media (min-width: 1200px) {
+  .why-choose-us .container .choose-us .section-title {
+    text-align: left;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .why-choose-us .container .choose-us .strengths {
+    display: grid;
+  }
+}
+.why-choose-us .container .choose-us .process-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 50px;
+}
+@media (min-width: 1200px) {
+  .why-choose-us .container .choose-us .process-wrapper {
+    margin: 0;
+  }
+}
+.why-choose-us .container .choose-us .process-wrapper h3 {
+  font-family: "DM Sans" sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.why-choose-us .container .choose-us .process-wrapper .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  background-color: #FFFFFF;
+  border: 1px solid #DAD9D3;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+@media (min-width: 1200px) {
+  .why-choose-us .container .choose-us .process-wrapper .icon-wrapper {
+    margin-bottom: 30px;
+  }
+}
+.why-choose-us .container .choose-us .process-wrapper .icon-wrapper i {
+  font-size: 36px;
+  color: #191919;
+}
+.why-choose-us .container .why-image {
+  position: relative;
+  margin-left: 20px;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .why-choose-us .container .why-image {
+    display: block;
+  }
+}
+.why-choose-us .container .why-image img {
+  margin-top: 85px;
+  z-index: 1;
+}

@@ -1,0 +1,124 @@
+.about {
+  margin-top: 120px;
+}
+@media (min-width: 1200px) {
+  .about .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 50px;
+  }
+}
+.about .container .position-relative {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100%;
+}
+@media (max-width: 576px) {
+  .about .container .position-relative {
+    display: none;
+  }
+}
+.about .container .position-relative .image-box {
+  position: relative;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .about .container .position-relative .image-box {
+    margin-bottom: -150px;
+  }
+}
+.about .container .position-relative .image-box .pen-stroke {
+  position: absolute;
+  top: 38px;
+  left: -30px;
+}
+@media (min-width: 768px) {
+  .about .container .position-relative .image-box .pen-stroke {
+    position: relative;
+    top: 140px;
+    left: -186px;
+  }
+}
+@media (min-width: 1200px) {
+  .about .container .position-relative .image-box .pen-stroke {
+    position: absolute;
+    top: 38px;
+    left: -30px;
+  }
+}
+.about .container .position-relative .image-box .sam-info {
+  background-color: #BEEBFF;
+  position: absolute;
+  top: 396px;
+  left: -58px;
+  width: 370px;
+  height: 180px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  padding-left: 24px;
+}
+@media (min-width: 768px) {
+  .about .container .position-relative .image-box .sam-info {
+    position: absolute;
+    top: 500px;
+    left: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .about .container .position-relative .image-box .sam-info {
+    position: absolute;
+    top: 396px;
+    left: -58px;
+  }
+}
+.about .container .position-relative .image-box .sam-info h3 {
+  font-family: "DM Sans" sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+.about .container .position-relative .image-box .sam-info h3 .founder-text {
+  font-family: "DM Sans", sans-serif;
+  color: #F94D1C;
+  font-size: 16px;
+  font-weight: 700;
+}
+.about .about-company {
+  text-align: center;
+  margin-top: 80px;
+}
+@media (min-width: 992px) {
+  .about .about-company {
+    margin-top: 240px;
+  }
+}
+@media (min-width: 1200px) {
+  .about .about-company {
+    margin: 0;
+    margin-left: 80px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1400px) {
+  .about .about-company {
+    margin-left: 85px;
+  }
+}
+.about .about-company .section-title {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.about .about-company .text {
+  margin-bottom: 85px;
+}
+.about .about-company .text p {
+  margin-bottom: 30px;
+  line-height: 2;
+}
+@media (min-width: 1200px) {
+  .about .about-company .btn-box {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

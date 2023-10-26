@@ -1,0 +1,108 @@
+footer {
+  background-color: #0E1021;
+  color: #FFFFFF;
+}
+footer .relative {
+  padding-bottom: 90px;
+  position: relative;
+  border-bottom: 1px solid #707070;
+}
+footer .relative .container {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  text-align: center;
+  padding-top: 115px;
+}
+@media (min-width: 1400px) {
+  footer .relative .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    text-align: left;
+  }
+}
+footer .relative .container .squiggly-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+footer .relative .container .crito {
+  margin-bottom: 20px;
+}
+footer .relative .container .crito img {
+  padding-bottom: 30px;
+  max-width: 100%;
+}
+footer .relative .container .crito p {
+  font-weight: 400;
+}
+footer .relative .container .info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: center;
+  gap: 60px;
+  row-gap: 30px;
+  margin-top: 25px;
+}
+@media (min-width: 994px) {
+  footer .relative .container .info {
+    display: flex;
+    justify-content: space-between;
+    justify-self: auto;
+  }
+}
+@media (min-width: 1200px) {
+  footer .relative .container .info {
+    gap: 100px;
+    margin-left: 120px;
+  }
+}
+footer .relative .container .info .link-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 30px;
+}
+@media (min-width: 1200px) {
+  footer .relative .container .info .link-wrapper {
+    margin-bottom: 0;
+  }
+}
+footer .relative .container .info .link-wrapper h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+footer .relative .container .info .link-wrapper a {
+  color: #FFFFFF;
+  padding-top: 10px;
+  font-weight: 500;
+  text-decoration: none;
+}
+footer .relative .container .info .link-wrapper a:hover {
+  color: #707070;
+  transition: 0.2s ease-in-out;
+}
+footer .copyright {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  row-gap: 10px;
+  padding: 15px;
+}
+@media (min-width: 768px) {
+  footer .copyright {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+footer .copyright .social-media a {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+footer .copyright .social-media a:hover {
+  color: #7c7c7c;
+  transition: 0.2s ease-in-out;
+}

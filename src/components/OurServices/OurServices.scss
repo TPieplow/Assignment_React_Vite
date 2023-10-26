@@ -1,0 +1,161 @@
+.our-services {
+    background-color: #F0EFE9;
+    margin-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+
+    .container {
+        margin: 0 auto;
+        padding: 25px;
+
+        .white-thingy {
+            position: absolute;
+            width: auto;
+            bottom: 0;
+            right: 0;
+            max-width: 100%;
+
+            img {
+                width: auto;
+                max-width: 100%;
+            }
+        }
+
+        .section-title {
+            padding-top: 70px;
+            padding-bottom: 40px;
+
+            @media (min-width: 768px) {
+                padding-top: 120px;
+                padding-bottom: 90px;
+            }
+
+            p {
+                color: #F94D1C;
+                margin-bottom: 8px;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            h2 {
+                color: #191919;
+                font-family: 'DM Sans', sans-serif;
+                font-weight: 700;
+                font-size: 45px;
+            }
+        }
+
+
+
+        .box-container {
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+
+            @media (min-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media (min-width: 1200px) {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+            }
+
+            .box-wrapper {
+                background-color: #FFFFFF;
+                padding: 25px 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: left;
+                transition: background-color 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: #F9D783;
+
+                    .box {
+                        background-color: #F9D783;
+                    }
+
+                    &:hover a {
+                        color: #FFFFFF !important;
+                        transition: background-color 0.2s ease-in-out;
+                        // Försökte färga pilen svart men blev svart runtom också. 
+                    }
+                }
+            }
+
+            .box {
+                position: relative;
+                border: 1px solid transparent;
+                margin: 15px 5px;
+                padding-top: 48px;
+                background-color: #FFFFFF;
+                transition: background-color 0.2s ease-in-out;
+                line-height: 2;
+
+                h3 {
+                    font-family: 'DM Sans', sans-serif;
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+
+                .arrow-wrapper {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    a {
+                        color: #191919;
+                        font-size: 2.5rem;
+                        align-self: flex-end;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        // Chosed a pseudo-element, as the border is purely decorative.
+        // Could have used border-top-width but don't want to affect the element's dimensions.
+        .box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 17%;
+            height: 1.5px;
+            background-color: #000;
+            margin-top: 10px;
+        }
+    }
+
+    .btn-transparent2 {
+        background-color: transparent;
+        border: 1px solid #191919;
+        color: #191919;
+        text-decoration: none;
+        padding: 15px 30px;
+        font-weight: 600;
+        font-size: 16px;
+        border-radius: 25px;
+        z-index: 3;
+
+        i {
+            margin-left: 8px;
+            font-size: 0.9rem;
+        }
+
+        &:hover {
+            background-color: #191919;
+            border: 1px solid #191919;
+            color: #F0EFE9;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.our-team {
+    background-color: #F0D082;
+    
+    .container {
+        
+        .title-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+
+            .section-title {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+                text-align: center;
+                
+                @media (min-width: 1200px) {
+                    
+                    text-align: left;
+                    
+                }
+                
+                p {
+                    font-weight: 400;
+                }
+            }
+            
+            .btn-yellow {
+
+                margin-top: 170px;
+                margin-bottom: 100px;
+            }
+        } 
+        
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            @media (min-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            @media (min-width: 1200px) {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+            
+            .member {
+                margin: 10px 0;
+                text-align: center;
+                
+                @media (min-width: 1200px) {
+                    text-align: left;
+                }
+                
+                .member-info {
+                    margin-top: 15px;
+                    
+                    h4 {
+                        font-family: 'DM Sans', sans-serif;
+                        font-size: 22px;
+                        font-weight: 700;
+                    }
+                    
+                    p {
+                        font-weight: 500;
+                    }
+                }
+            }
+            
+            img {
+                max-width: 100%;
+            }
+            
+            .member:hover img {
+                transform: scale(1.05);
+                transition: 0.3s ease-in-out;
+            }
+        }
+        
+        .ring-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            padding-bottom: 10px;
+        }
+        
+        .ring {
+            width: 10px;
+            height: 10px;
+            background-color: gray;
+            border-radius: 50%;
+            margin: 0 7px;
+        }
+        
+        .ring-2 {
+            background-color: #191919 !important;
+        }
+    }
+}

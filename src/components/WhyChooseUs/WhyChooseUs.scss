@@ -1,0 +1,112 @@
+.why-choose-us {
+    overflow-x: hidden;
+    position: relative;
+    
+    .gray-div {
+        display: none;
+        position: absolute;
+        background-color: #F0EFE9;
+        width: 54%;
+        height: 60%;
+        bottom: 25px;
+        right: 0;
+        max-width: 100%;
+        
+        @media (min-width: 1200px) {
+            display: inline-block;
+        }
+    }
+    
+    .container {
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        z-index: 0;
+        
+        @media (min-width: 1200px) {
+            display: grid;
+            grid-template-columns: auto 1fr;
+        }
+        
+        .choose-us {
+            @media (min-width: 1200px) {
+                margin-right: 50px;
+            }
+            
+            @media (min-width: 1400px) {
+                margin-right: 215px;
+            }
+            
+            .section-title {
+                @media (min-width: 1200px) {
+                    text-align: left;
+                    padding-top: 60px;
+                    padding-bottom: 30px;
+                }
+            }
+            
+            .strengths {
+                @media (min-width: 1200px) {
+                    display: grid;
+                }
+            }
+            
+            .process-wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-align: left;
+                margin-bottom: 50px;
+                
+                @media (min-width: 1200px) {
+                    margin: 0;
+                }
+                
+                h3 {
+                    font-family: 'DM Sans' sans-serif;
+                    font-size: 22px;
+                    font-weight: 700;
+                    margin: 10px 0;
+                }
+                
+                .icon-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 75px;
+                    height: 75px;
+                    background-color: #FFFFFF;
+                    border: 1px solid #DAD9D3;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                    
+                    @media (min-width: 1200px) {
+                        margin-bottom: 30px;
+                    }
+                    
+                    i {
+                        font-size: 36px;
+                        color: #191919;
+                    }
+                }
+            }
+        }
+        
+        .why-image {
+            position: relative;
+            margin-left: 20px;
+            display: none;
+            
+            
+            @media (min-width: 1200px) {
+                display: block;
+            }
+            
+            img {
+                margin-top: 85px;
+                z-index: 1;
+            }
+        }
+    }
+}

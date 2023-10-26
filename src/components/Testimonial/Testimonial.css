@@ -1,0 +1,87 @@
+.testimonial {
+  background-color: #F0D082;
+  padding-top: 70px;
+  padding-bottom: 120px;
+}
+.testimonial .borders {
+  border: 1px solid #FFFFFF;
+  background-color: #FFFFFF;
+  margin: 0 8%;
+}
+.testimonial .borders .container {
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+.testimonial .borders .container .section-title {
+  text-align: center;
+}
+.testimonial .borders .container .review-wrapper {
+  margin-bottom: 50px;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .testimonial .borders .container .review-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 1400px) {
+  .testimonial .borders .container .review-wrapper {
+    gap: 50px;
+  }
+}
+.testimonial .borders .container .review {
+  display: flex;
+  flex-direction: column-reverse;
+  line-height: 2;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .testimonial .borders .container .review {
+    border: 1px solid #c7c7c7;
+  }
+}
+@media (max-width: 768px) {
+  .testimonial .borders .container .review {
+    border-bottom: 1px solid #c7c7c7;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .testimonial .borders .container .review {
+    flex-direction: column;
+    padding: 5px 30px;
+    border: none;
+  }
+}
+.testimonial .borders .container .review .stars {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.testimonial .borders .container .review .stars .star {
+  color: #F94D1C;
+}
+.testimonial .borders .container .review .client {
+  display: flex;
+  flex-direction: row;
+}
+.testimonial .borders .container .review .client img {
+  margin-right: 10px;
+  align-self: center;
+}
+.testimonial .borders .container .review .client .title {
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.5;
+}
+.testimonial .borders .container .review .client .title h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+.testimonial .borders .container .review .client .title p {
+  color: #F94D1C;
+}
+.testimonial .borders .container .btn-box {
+  margin-bottom: 120px;
+}

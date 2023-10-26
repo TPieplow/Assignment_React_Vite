@@ -1,0 +1,20 @@
+.brands-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+.brands-box .brand-item {
+  flex: 0 0 calc(20% - 30px);
+  max-width: calc(20% - 30px);
+}
+@media (min-width: 1200px) {
+  .brands-box .brand-item {
+    margin-left: 38px;
+  }
+}
+.brands-box .brand-item img {
+  max-width: 100%;
+  height: auto;
+}

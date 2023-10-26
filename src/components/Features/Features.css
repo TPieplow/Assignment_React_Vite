@@ -1,0 +1,121 @@
+.features-section .borders {
+  border: 1px solid #DAD9D3;
+  margin: 0 4%;
+  padding: 50px 0px;
+}
+@media (min-width: 1200px) {
+  .features-section .borders {
+    margin: 0 8%;
+  }
+}
+.features-section .borders .container {
+  margin-top: 80px;
+}
+@media (min-width: 1200px) {
+  .features-section .borders .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 50px 20px;
+  }
+}
+@media (min-width: 1600px) {
+  .features-section .borders .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+  }
+}
+.features-section .borders .section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+@media (min-width: 1200px) {
+  .features-section .borders .section-title {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    max-width: 490px;
+  }
+}
+@media (min-width: 1600px) {
+  .features-section .borders .section-title {
+    margin-left: 25px;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+.features-section .borders .section-title .btn-yellow {
+  margin-left: 30px;
+  width: 440px;
+}
+.features-section .borders .section-title p {
+  margin-bottom: 35px;
+}
+.features-section .borders .section-title h2 {
+  margin-bottom: 35px;
+}
+.features-section .borders .section-title a {
+  text-align: center;
+}
+.features-section .borders .advice {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 60px;
+  text-align: center;
+  gap: 20px;
+}
+@media (min-width: 1200px) {
+  .features-section .borders .advice {
+    margin-right: 20px;
+    text-align: left;
+  }
+}
+@media (min-width: 1600px) {
+  .features-section .borders .advice {
+    right: 35px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    row-gap: 45px;
+  }
+}
+.features-section .borders .advice .icon-wrapper {
+  position: absolute;
+}
+.features-section .borders .advice .icon-wrapper .plus1 {
+  position: relative;
+  top: -75px;
+  left: 10px;
+  color: #191919;
+  font-size: 12px;
+}
+.features-section .borders .advice .icon-wrapper .plus2 {
+  position: relative;
+  top: -65px;
+  left: 25px;
+  color: #191919;
+  font-size: 12px;
+}
+.features-section .borders .advice .icon-wrapper .plus3 {
+  position: relative;
+  top: -40px;
+  left: 30px;
+  color: #191919;
+  font-size: 12px;
+}
+.features-section .borders .advice h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+.features-section .borders .advice i {
+  font-size: 2rem;
+  margin-top: 5px;
+  margin-bottom: 38px;
+  font-weight: 500;
+}

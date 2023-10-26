@@ -1,0 +1,23 @@
+.brands-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+    .brand-item {
+        
+        flex: 0 0 calc(20% - 30px); 
+        max-width: calc(20% - 30px); 
+        
+        @media (min-width: 1200px) {
+            margin-left: 38px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
