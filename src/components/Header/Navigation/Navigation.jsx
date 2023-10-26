@@ -36,10 +36,10 @@ const Navigation = () => {
           </div>
           <div className="main-menu">
             <nav>
-              <a className="active" href="index.html">Home</a>
-              <a href="services.html">Service</a>
-              <a href="news.html">News</a>
-              <a href="contact.html">Contact</a>
+              <a className="/active" href="index.html">Home</a>
+              <a href="/services.html">Service</a>
+              <a href="/news.html">News</a>
+              <a href="/contact">Contact</a>
             </nav>
             <Button type="yellow" text="Login" url="/login" />
           </div>

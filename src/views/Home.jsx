@@ -12,6 +12,9 @@ import ArticleNews from '../components/ArticleNews/ArticleNews';
 import NewsLetter from '../components/NewsLetter/NewsLetter';
 import Footer from '../components/Footer/Footer';
 
+import '../App.css';
+
+
 
 const Home = () => {
   return (

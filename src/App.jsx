@@ -1,4 +1,3 @@
-import './App.css';
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,6 +6,7 @@ import {
   BrowserRouter
 } from 'react-router-dom';
 
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -24,7 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Outlet />}>
             <Route index element={<Home />} />
-            <Route path="/contacts" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/news" element={<News />} />
             <Route path="/newsDetails" element={<NewsDetails />} />
           </Route>
