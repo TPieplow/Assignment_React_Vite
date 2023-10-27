@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom';
+
 import './ShowCaseContact.css'
 import ShowCaseWhiteStroke from '#images/showcase-stroke.svg';
 
@@ -11,8 +13,8 @@ const ShowCaseContact = () => {
             </div>
             <div className="container">
                 <div className="content">
-                    <a href="index.html">Home</a>
-                    <a href="contact.html">Contact</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/contact">Contact</Link>
                     <h1>Let's Connect</h1>
                 </div>
             </div>

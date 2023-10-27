@@ -13,7 +13,7 @@ const NewsLetter = () => {
         <h2>News Updates By Signup</h2>
         <form>
             <input type="text" placeholder="username@domain.com" />
-            <Button type="yellow" text="Subscribe" url="" />
+            <Button type="yellow" text="Subscribe" url="/" />
         </form>
     </div>
 </section>

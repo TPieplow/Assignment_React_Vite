@@ -11,10 +11,10 @@ import Projects from '../../generics/Projects';
 
 const ProjectCaseStudies = () => {
     const projects = [
-        { img: img_manWithNewsPaper, title: "Grow Your Business", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
-        { img: img_tabletGlasses, title: "Why Your Clients Needs A Responsive Website", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
-        { img: img_notebook, title: "Educate Your Employees To Get Better Results", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
-        { img: img_laptop, title: "Business Insights Is A Important Piece Of Your Business", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
+        { img: img_manWithNewsPaper, url: "/articles", title: "Grow Your Business", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
+        { img: img_tabletGlasses, url: "/articles", title: "Why Your Clients Needs A Responsive Website", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
+        { img: img_notebook, url: "/articles", title: "Educate Your Employees To Get Better Results", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
+        { img: img_laptop, url: "/articles", title: "Business Insights Is A Important Piece Of Your Business", description: "Read More", iconClass: "fa-regular fa-arrow-up-right" },
     ];
     return (
         <section className="project">
@@ -26,13 +26,13 @@ const ProjectCaseStudies = () => {
                 <div className="project-cases">
                     {
                         projects.map((project, index) => (
-                            <Projects key={index} img={project.img} title={project.title} description={project.description} iconClass={project.iconClass} />
+                            <Projects key={index} img={project.img} url={project.url} title={project.title} description={project.description} iconClass={project.iconClass} />
                         ))
                     }
 
                 </div>
                 <div className="btn-box">
-                    <Button type="dark" text="All Recent Projects" />
+                    <Button type="dark" text="All Recent Projects" url="/projects" />
                 </div>
             </div>
         </section>

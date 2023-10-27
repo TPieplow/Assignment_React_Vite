@@ -30,7 +30,7 @@ const Testimonial = () => {
                
             </div>
             <div className="btn-box">
-                <Button type="dark" text="All Reviews" />
+                <Button type="dark" text="All Reviews" url="/reviews" />
             </div>
         </div>
     </div>

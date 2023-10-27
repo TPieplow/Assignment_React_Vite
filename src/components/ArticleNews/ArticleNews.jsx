@@ -35,11 +35,11 @@ const ArticleNews = () => {
 
                 </div>
                 <div className="ring-container">
-                    <div className="ring ring-1"><a href=""></a></div>
-                    <div className="ring"><a href="#"></a></div>
-                    <div className="ring"><a href="#"></a></div>
-                    <div className="ring"><a href="#"></a></div>
-                    <div className="ring"><a href="#"></a></div>
+                    <div className="ring ring-1"></div>
+                    <div className="ring"></div>
+                    <div className="ring"></div>
+                    <div className="ring"></div>
+                    <div className="ring"></div>
                 </div>
             </div>
         </section>

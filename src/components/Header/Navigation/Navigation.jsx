@@ -1,5 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+
 
 import './Navigation.css'
 import Button from '#button'
@@ -10,7 +11,7 @@ const Navigation = () => {
   return (
     <section className="nav-section">
       <div className="container">
-        <a href="index.html"><img src={ img_logotype } alt="crito logo" /></a>
+        <Link to="/"><img src={ img_logotype } alt="crito logo" /></Link>
         <button className="menu-bars"><i className="fa-solid fa-bars-staggered"></i></button>
         <div className="menu">
           <div className="top-menu">
@@ -29,10 +30,10 @@ const Navigation = () => {
               </div>
             </div>
             <div className="social-media">
-              <a href="#" target="_blank"><i className="fa-brands fa-facebook"></i></a>
-              <a href="#" target="_blank"><i className="fa-brands fa-x-twitter"></i></a>
-              <a href="#" target="_blank"><i className="fa-brands fa-instagram"></i></a>
-              <a href="#" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
+              <Link to="https://facebook.com" target="_blank"><i className="fa-brands fa-facebook"></i></Link>
+              <Link to="https://twitter.com" target="_blank"><i className="fa-brands fa-x-twitter"></i></Link>
+              <Link to="https://instagram.com" target="_blank"><i className="fa-brands fa-instagram"></i></Link>
+              <Link to="https://linkedin.com" target="_blank"><i className="fa-brands fa-linkedin"></i></Link>
             </div>
           </div>
           <div className="main-menu">

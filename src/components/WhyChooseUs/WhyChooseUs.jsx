@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
 
         {
             strenghts.map((strenght, index) =>
-            <Strengths key={index} iconClass={strenght.iconClass} title={strenght.title} description={strenght.description} />)
+            <Strengths key={ index } iconClass={ strenght.iconClass } title={ strenght.title } description={ strenght.description } />)
         }
         
         </div>

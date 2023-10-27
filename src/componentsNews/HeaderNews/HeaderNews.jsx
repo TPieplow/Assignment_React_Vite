@@ -1,15 +1,16 @@
-import React from 'react';
+import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
 
-import '../../components/Header/Header.css';
 import CritoLogo from '#images/logo_crito.svg';
 
-const HeaderContact = () => {
+
+
+
+const HeaderNews = () => {
     return (
         <header>
             <div className="container">
-                <Link to="index.html"><img src={CritoLogo} alt="crito logo" /></Link>
-                <button className="menu-bars"><i className="fa-solid fa-bars-staggered" title="folded menu-bar"></i></button>
+                <Link to="/"><img src={CritoLogo} alt="crito logo" /></Link>
                 <div className="menu">
                     <div className="top-menu">
                         <div className="contact-info">
@@ -35,14 +36,12 @@ const HeaderContact = () => {
                     </div>
                     <div className="main-menu">
                         <nav>
-                            <nav>
-                                <NavLink to="/">Home</NavLink>
-                                <NavLink to="/services">Service</NavLink>
-                                <NavLink to="/news">News</NavLink>
-                                <NavLink to="/Contact">Contact</NavLink>
-                            </nav>
+                            <NavLink to="/">Home</NavLink>
+                            <NavLink to="/services">Service</NavLink>
+                            <NavLink to="/news">News</NavLink>
+                            <NavLink to="/Contact">Contact</NavLink>
                         </nav>
-                        <Link to="/login" className="btn-yellow btn-login" >Login <i className="fa-regular fa-arrow-up-right"></i></Link>
+                        <Link to="/login" className="btn-yellow btn-login">Login <i className="fa-regular fa-arrow-up-right"></i></Link>
                     </div>
                 </div>
             </div>
@@ -50,4 +49,4 @@ const HeaderContact = () => {
     )
 }
 
-export default HeaderContact
+export default HeaderNews

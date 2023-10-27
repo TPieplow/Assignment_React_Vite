@@ -1,13 +1,15 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 const ServiceBox = ({ title, description, url }) => {
     return (
-        <div href="#" className="box-wrapper">
+        <div className="box-wrapper">
             <div className="box box-1">
                 <h3>{ title }</h3>
                 <p>{ description }</p>
                 <div className="arrow-wrapper">
-                    <a href={ url }><i className="fa-sharp fa-solid fa-circle-arrow-right"></i></a>
+                    <Link to={ url }><i className="fa-sharp fa-solid fa-circle-arrow-right"></i></Link>
                 </div>
             </div>
         </div>

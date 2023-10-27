@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './AboutCompany.css';
 
@@ -13,7 +14,7 @@ const AboutCompany = () => {
     <div className="container">
         <div className="position-relative">
             <div className="image-box">
-                <img className="pen-stroke" src={ img_penstroke } alt="white-pen-stroke" />
+                <img src={ img_penstroke } className="pen-stroke" alt="white-pen-stroke" />
                 <img src={ img_samantha } alt="Samantha in a blue shirt" loading="lazy" />
                 <div className="sam-info">
                     <h3>Samantha Brown, <span className="founder-text">Founder</span></h3>
@@ -29,7 +30,7 @@ const AboutCompany = () => {
             </div>
             <div className="btn-box">
                 <Button type="dark" text="Learn More" url="/about" />
-                <a href="" className="btn-intro"> <i className="fa-thin fa-circle-play"></i>Intro Video</a>
+                <Link href="" className="btn-intro"> <i className="fa-thin fa-circle-play"></i>Intro Video</Link>
             </div>
         </div>
     </div>
