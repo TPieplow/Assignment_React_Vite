@@ -15,10 +15,10 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .showcase .container .content {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  text-align: center;
 }
 @media (min-width: 1200px) {
   .showcase .container .content {
@@ -29,16 +29,16 @@
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 40px;
-  text-align: left;
 }
 @media (min-width: 768px) {
   .showcase .container .content h1 {
     font-size: 70px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .showcase .container .content h1 {
     font-size: 86px;
+    text-align: left;
   }
 }
 .showcase .container .content p {
@@ -47,13 +47,13 @@
   padding-bottom: 40px;
   padding-left: 10px;
   padding-right: 10px;
-  text-align: left;
 }
 @media (min-width: 768px) {
   .showcase .container .content p {
     font-size: 20px;
     padding-left: 0px;
     padding-right: 0px;
+    text-align: left;
   }
 }
 .showcase .container .content a {
@@ -67,12 +67,14 @@
     display: inline-block;
   }
 }
-.showcase .container .content .button-links {
-  display: flex;
+@media (min-width: 1200px) {
+  .showcase .container .content .button-links {
+    display: flex;
+  }
 }
 .showcase .container img {
   display: none;
-  max-width: 100%;
+  margin-right: -40px;
 }
 @media (min-width: 1200px) {
   .showcase .container img {

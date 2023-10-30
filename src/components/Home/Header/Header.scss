@@ -1,12 +1,14 @@
 header {
     background-color: #F0EFE9;
-    // padding: 16px;
+    padding-top: 16px;
+    
 
     .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 70px;
+
 
         .menu-bars {
             border: none;

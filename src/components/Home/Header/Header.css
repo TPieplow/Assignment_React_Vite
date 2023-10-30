@@ -1,5 +1,6 @@
 header {
   background-color: #F0EFE9;
+  padding-top: 16px;
 }
 header .container {
   display: flex;

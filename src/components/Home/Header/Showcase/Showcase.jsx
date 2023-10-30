@@ -2,6 +2,7 @@ import React from 'react';
 
 import './Showcase.css';
 
+
 import showcase_stroke from '#images/showcase-stroke.svg';
 import man_with_tablet from '#images/man_with_tablet.svg';
 

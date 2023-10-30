@@ -1,7 +1,7 @@
 .showcase {
     background-color: #F0EFE9;
     position: relative;
-    
+
     .sc-white-stroke {
         position: absolute;
         bottom: 0;
@@ -17,28 +17,28 @@
         position: relative;
         display: flex;
         justify-content: space-between;
-        
+        align-items: center;
+
         .content {
-            padding-top: 40px;
-            padding-bottom: 40px;
+            text-align: center;
             
             @media (min-width: 1200px) {
                 text-align: left;
-                // margin-right: 550px;
             }
             
             h1 {
                 font-family: 'DM Sans', sans-serif;
                 font-weight: 700;
                 font-size: 40px;
-                text-align: left;
+
                 
                 @media (min-width: 768px) {
                     font-size: 70px;
                 }
                 
-                @media (min-width: 1400px) {
+                @media (min-width: 1200px) {
                     font-size: 86px;
+                    text-align: left;
                 }
             }
             
@@ -48,12 +48,12 @@
                 padding-bottom: 40px;
                 padding-left: 10px;
                 padding-right: 10px;
-                text-align: left;
                 
                 @media (min-width: 768px) {
                     font-size: 20px;
                     padding-left: 0px;
                     padding-right: 0px;
+                    text-align: left;
                 }
             }
             
@@ -69,18 +69,16 @@
             }
             
             .button-links {
-                display: flex;
+                
+                @media (min-width: 1200px) {
+                    display: flex;
+                }
             }
         }
         
         img {
             display: none;
-            // position: absolute;
-            // bottom: 0;
-            // right: 0;
-            max-width: 100%;
-            ; 
-            
+            margin-right: -40px;
             
             @media (min-width: 1200px) {
                 display: block;
