@@ -2,14 +2,15 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-const ArticleNews = ({ url, img, title, articleHeader, description, alt }) => {
+const ArticleNews = ({ url, img, title, content, author, published, category, alt }) => {
   return (
     <Link to={url} className="text-wrapper">
-                <img src={ img } alt={ alt } loading="lazy" />
-                <p>{ title }</p>
-                <h3>{ articleHeader }</h3>
-                <p>{ description }</p>
-            </Link>
+      <img className="articleImg" src={img} alt={alt} loading="lazy" />
+      <p>{category}</p>
+      <h3 >{title}</h3>
+      <p>{author}</p>
+      <p>{content}</p>
+    </Link>
   )
 }
 

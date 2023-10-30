@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../components/Footer/Footer';
+import Footer from '#components/Home/Footer/Footer';
 
 import './NotFound.css';
 import cat from '#images/catpagenotfound.png';

@@ -1,11 +1,11 @@
 import React from 'react';
 
 import '../App.css';
-import HeaderNews from '../componentsNews/HeaderNews/HeaderNews';
-import Footer from '../components/Footer/Footer';
-import ShowcaseNews from '../componentsNews/ShowcaseNews/ShowcaseNews';
-import ArticleNewsNews from '../componentsNews/ArticleNewsNews/ArticleNewsNews';
-import NewsLetterNews from '../componentsNews/NewsLetterNews/NewsLetterNews';
+import HeaderNews from '#components/News/HeaderNews/HeaderNews';
+import Footer from '#components/Home/Footer/Footer';
+import ShowcaseNews from '#components/News/ShowcaseNews/ShowcaseNews';
+import ArticleNewsNews from '#components/News/ArticleNewsNews/ArticleNewsNews';
+import NewsLetterNews from '#components/News/NewsLetterNews/NewsLetterNews';
 
 const News = () => {
   return (

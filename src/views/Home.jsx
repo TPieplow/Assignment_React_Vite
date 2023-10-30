@@ -1,16 +1,16 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import OurServices from '../components/OurServices/OurServices';
-import Features from '../components/Features/Features';
-import AboutCompany from '../components/AboutCompany/AboutCompany';
-import BrandsBox from '../components/BrandsBox/BrandsBox';
-import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs';
-import ProjectCaseStudies from '../components/ProjectCaseStudies/ProjectCaseStudies';
-import OurTeam from '../components/OurTeam/OurTeam';
-import Testimonial from '../components/Testimonial/Testimonial';
-import ArticleNews from '../components/ArticleNews/ArticleNews';
-import NewsLetter from '../components/NewsLetter/NewsLetter';
-import Footer from '../components/Footer/Footer';
+import Header from '#components/Home/Header/Header';
+import OurServices from '#components/Home/OurServices/OurServices';
+import Features from '#components/Home/Features/Features';
+import AboutCompany from '#components/Home/AboutCompany/AboutCompany';
+import BrandsBox from '#components/Home/BrandsBox/BrandsBox';
+import WhyChooseUs from '#components/Home/WhyChooseUs/WhyChooseUs';
+import ProjectCaseStudies from '#components/Home/ProjectCaseStudies/ProjectCaseStudies';
+import OurTeam from '#components/Home/OurTeam/OurTeam';
+import Testimonial from '#components/Home/Testimonial/Testimonial';
+import ArticleNews from '#components/Home/ArticleNews/ArticleNews';
+import NewsLetter from '#components/Home/NewsLetter/NewsLetter';
+import Footer from '#components/Home/Footer/Footer';
 
 import '../App.css';
 

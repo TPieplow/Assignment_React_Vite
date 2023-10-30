@@ -2,13 +2,12 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Outlet,
   BrowserRouter
 } from 'react-router-dom';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 
 import Home from './views/Home';
 import Contact from './views/Contact';
