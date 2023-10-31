@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
-import './ArticleNews.css';
+// import '../ArticleNews.css';
+import './ArticlesNewsND.css';
 
 import Button from '#button';
 import SectionTitle from '#sectiontitle';
-import Articles from '../../../generics/Articles';
+import Articles from '../../../generics/Articles'
 
 
-const ArticleNews = () => {
+const ArticleNewsND = () => {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
@@ -25,7 +26,7 @@ const ArticleNews = () => {
     };
 
     return (
-        <section className="article-news">
+        <section className="article-news background">
             <div className="container">
                 <div className="title-part">
                     <SectionTitle title="Article & News" description="Get Every Single Article & News" />
@@ -58,4 +59,4 @@ const ArticleNews = () => {
     )
 }
 
-export default ArticleNews
+export default ArticleNewsND

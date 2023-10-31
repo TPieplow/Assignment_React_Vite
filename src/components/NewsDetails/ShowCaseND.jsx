@@ -1,11 +1,10 @@
 import React from 'react'
 
+import Showcases from '../../generics/Showcases';
 
-import Showcases from '../../../generics/Showcases';
-
-const ShowcaseNews = () => {
+const ShowCaseND = () => {
     const showcases = [
-        {title: "News & Articles", url: "/News", urlName: "News"}
+        {title: "News & Articles", url: "/news", urlName: "News"}
       ];
     return (
         showcases.map((showcase, index) => (
@@ -13,10 +12,10 @@ const ShowcaseNews = () => {
                 key={ index }
                 title={ showcase.title }
                 url={ showcase.url }
-                urlName={showcase.urlName}
+                urlName={ showcase.urlName }
             />
         ))
     )
 }
 
-export default ShowcaseNews
+export default ShowCaseND

@@ -1,20 +1,18 @@
-import React from 'react'
+import React from 'react';
 import { useState, useEffect } from 'react';
 
 import './ArticleNewsNews.css'
 import ArticleNews from '../../../generics/ArticleNews';
-
 import ImageCarousel from './ImgCarousel';
 
 
 const ArticleNewsNews = () => {
 
-    const [articles, setArticles] = useState([])
+    const [articles, setArticles] = useState([]);
 
     useEffect(() => {
         getArticles()
-        console.log("running")
-    }, [])
+    }, []);
 
     const getArticles = async () => {
         try {
@@ -22,9 +20,9 @@ const ArticleNewsNews = () => {
             const articleData = await result.json();
             setArticles(articleData);
         } catch (error) {
-            console.error('Error fetching articles', error)
+            console.error('Error fetching articles', error);
         }
-    }
+    };
 
     return (
         <section className="article-news">
@@ -35,13 +33,17 @@ const ArticleNewsNews = () => {
                     </div>
                 </div>
                 <div className="content-news">
-
                     {
                         articles.map((article) => (
-                            <ArticleNews key={ article.id } img={ article.imageUrl } title={ article.title } content={ article.content } category={ article.category } alt={ article.alt } />
+                            <ArticleNews 
+                                key={ article.id }
+                                img={ article.imageUrl }
+                                title={ article.title }
+                                content={ article.content }
+                                category={ article.category }
+                            />
                         ))
                     }
-
                 </div>
                 <div className="chevron-slider">
                     <div className="chevron chevron-left" id="prev">&lt;</div>

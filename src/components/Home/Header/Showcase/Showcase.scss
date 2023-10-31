@@ -7,12 +7,12 @@
         bottom: 0;
         left: 0;
         max-width: 100%;
-        
+
         img {
             max-width: 100%;
         }
     }
-    
+
     .container {
         position: relative;
         display: flex;
@@ -21,34 +21,34 @@
 
         .content {
             text-align: center;
-            
+
             @media (min-width: 1200px) {
                 text-align: left;
             }
-            
+
             h1 {
                 font-family: 'DM Sans', sans-serif;
                 font-weight: 700;
                 font-size: 40px;
 
-                
+
                 @media (min-width: 768px) {
                     font-size: 70px;
                 }
-                
+
                 @media (min-width: 1200px) {
                     font-size: 86px;
                     text-align: left;
                 }
             }
-            
+
             p {
                 font-size: 18px;
                 padding-top: 40px;
                 padding-bottom: 40px;
                 padding-left: 10px;
                 padding-right: 10px;
-                
+
                 @media (min-width: 768px) {
                     font-size: 20px;
                     padding-left: 0px;
@@ -56,33 +56,42 @@
                     text-align: left;
                 }
             }
-            
+
             a {
                 margin-right: 0px;
                 display: block;
                 margin-bottom: 20px;
-                
+
                 @media (min-width: 768px) {
                     margin-right: 10px;
                     display: inline-block;
                 }
             }
-            
+
             .button-links {
-                
+
                 @media (min-width: 1200px) {
                     display: flex;
                 }
             }
         }
-        
+
         img {
             display: none;
             margin-right: -40px;
-            
+
             @media (min-width: 1200px) {
                 display: block;
             }
+        }
+    }
+
+    .links {
+        text-decoration: none;
+        color: #191919;
+
+        &.active {
+            font-weight: 700;
         }
     }
 }

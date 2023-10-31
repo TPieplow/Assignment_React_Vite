@@ -81,3 +81,10 @@
     display: block;
   }
 }
+.showcase .links {
+  text-decoration: none;
+  color: #191919;
+}
+.showcase .links.active {
+  font-weight: 700;
+}

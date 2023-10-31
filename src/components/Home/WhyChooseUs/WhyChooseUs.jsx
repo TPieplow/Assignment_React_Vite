@@ -21,12 +21,15 @@ const WhyChooseUs = () => {
     <div className="choose-us">
         <SectionTitle title="Why Choose Us" description="Why We Are The Best Business Consulting Agency" />
         <div className="strengths">
-
         {
             strenghts.map((strenght, index) =>
-            <Strengths key={ index } iconClass={ strenght.iconClass } title={ strenght.title } description={ strenght.description } />)
+            <Strengths
+                key={ index }
+                iconClass={ strenght.iconClass }
+                title={ strenght.title }
+                description={ strenght.description }
+            />)
         }
-        
         </div>
     </div>
     <div className="why-image">

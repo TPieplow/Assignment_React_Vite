@@ -13,12 +13,17 @@ const ContactInformation = () => {
     return (
         <section className="contact-information">
             <div className="container">
-
                 {
                     contactBoxes.map((contactBox, index) =>
-                    <ContactInfo key={index} iconClass={contactBox.iconClass} title={contactBox.title} desciption={contactBox.desciption} secondDescription={contactBox.secondDescription}     />)
+                        <ContactInfo
+                            key={index}
+                            iconClass={contactBox.iconClass}
+                            title={contactBox.title}
+                            desciption={contactBox.desciption}
+                            secondDescription={contactBox.secondDescription}
+                        />
+                    )
                 }
-
             </div>
         </section>
     )

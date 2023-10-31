@@ -26,13 +26,16 @@ const OurTeam = () => {
                     <Button type="yellow" text="Browse Team" url="/team" />
                 </div>
                 <div className="team">
-
                     {
                         team.map((teamMember, index) => (
-                            <Team key={ index } img={ teamMember.img } name={ teamMember.name } jobTitle={ teamMember.jobTitle } />
+                            <Team
+                                key={ index }
+                                img={ teamMember.img }
+                                name={ teamMember.name }
+                                jobTitle={ teamMember.jobTitle }
+                            />
                         )) 
                     }
-                   
                 </div>
                 <div className="ring-container">
                     <div className="ring"></div>

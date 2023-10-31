@@ -8,7 +8,6 @@ import {
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 import Home from './views/Home';
 import Contact from './views/Contact';
 import News from './views/News';
@@ -21,10 +20,10 @@ function App() {
     <div className="wrapper">
       <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/newsDetails" element={<NewsDetails />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/newsDetails" element={<NewsDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

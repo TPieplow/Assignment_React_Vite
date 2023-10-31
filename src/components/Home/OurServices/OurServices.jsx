@@ -26,13 +26,16 @@ const OurServices = () => {
             <div className="container">
                 <SectionTitle title="Our Services" description={text} />
                 <div className="box-container">
-
                     {
                         services.map((service, index) => (
-                            <ServiceBox key={index} title={service.title} description={service.description} url={service.url} />
+                            <ServiceBox
+                                key={index}
+                                title={service.title}
+                                description={service.description}
+                                url={service.url}
+                            />
                         ))
                     }
-
                 </div>
                 <div className="btn-box">
                     <Button type="dark" text="Browse Services" url="/services" />

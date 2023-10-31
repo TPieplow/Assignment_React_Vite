@@ -1,24 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-import { Link } from 'react-router-dom';
-
-import './ShowCaseContact.css'
-import ShowCaseWhiteStroke from '#images/showcase-stroke.svg';
+import './ShowCaseContact.css';
+import Showcases from '../../../generics/Showcases';
 
 const ShowCaseContact = () => {
+    const showcases = [
+        { title: "Contact us", url: "/contact", urlName: "Contact" }
+    ];
     return (
-        <section className="showcase">
-            <div className="sc-white-stroke">
-                <img src={ ShowCaseWhiteStroke } alt="detail with white pen strokes" />
-            </div>
-            <div className="container">
-                <div className="content">
-                    <Link to="/">Home</Link>
-                    <Link to="/contact">Contact</Link>
-                    <h1>Let's Connect</h1>
-                </div>
-            </div>
-        </section>
+        showcases.map((showcase, index) => (
+            <Showcases
+                key={ index }
+                title={ showcase.title }
+                url={ showcase.url }
+                urlName={ showcase.urlName }
+            />
+        ))
     )
 }
 

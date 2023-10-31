@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import ShowCaseWhiteStroke from '#images/showcase-stroke.svg';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const Showcases = ({ title, url }) => {
+const Showcases = ({ title, url, urlName }) => {
   return (
     <section className="showcase">
     <div className="sc-white-stroke">
@@ -11,8 +11,8 @@ const Showcases = ({ title, url }) => {
     </div>
     <div className="container">
         <div className="content">
-            <Link to="/">Home</Link>
-            <Link to="/news">{ url }</Link>
+            <NavLink className="links" to="/">Home</NavLink>
+            <NavLink className="links" to={ url }>{ urlName }</NavLink>
             <h1>{ title }</h1>
         </div>
     </div>

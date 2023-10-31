@@ -1,8 +1,27 @@
 import React from 'react'
 
+import HeaderND from '../components/NewsDetails/HeaderND'
+import Footer from '../components/Home/Footer/Footer'
+import ShowCaseND from '../components/NewsDetails/ShowCaseND'
+import NewsContents from '../components/NewsDetails/NewsContents'
+import ArticleNewsND from '../components/NewsDetails/ArticlesNewsND/ArticleNewsND'
+
 const NewsDetails = () => {
   return (
-    <div>NewsDetails</div>
+    <div className="wrapper">
+
+    <HeaderND />
+    <ShowCaseND />
+    <NewsContents />
+    <ArticleNewsND />
+    
+    <main>
+      
+      
+    </main>
+    <Footer />
+
+  </div>
   )
 }
 

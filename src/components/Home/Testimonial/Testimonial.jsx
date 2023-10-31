@@ -24,7 +24,13 @@ const Testimonial = () => {
 
                 {
                     reviews.map((review, index) => (
-                        <Reviews key={ index } description={ review.description } img={ review.img } alt={ review.alt } name={ review.name } jobTitle={ review.jobTitle } />
+                        <Reviews
+                            key={ index }
+                            description={ review.description }
+                            img={ review.img } alt={ review.alt }
+                            name={ review.name }
+                            jobTitle={ review.jobTitle }
+                        />
                     ))
                 }
                

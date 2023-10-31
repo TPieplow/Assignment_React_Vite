@@ -17,7 +17,6 @@ import ShowCaseContact from '#components/Contact/ShowCaseContact/ShowCaseContact
 const Contact = () => {
   return (
     <div className="wrapper">
-
       <HeaderContact />
       <ShowCaseContact />
       <main>
@@ -26,7 +25,6 @@ const Contact = () => {
         <Iframe />
       </main>
       <Footer />
-
     </div>
   )
 }

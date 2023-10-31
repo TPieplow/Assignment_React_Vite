@@ -26,10 +26,16 @@ const ProjectCaseStudies = () => {
                 <div className="project-cases">
                     {
                         projects.map((project, index) => (
-                            <Projects key={index} img={project.img} url={project.url} title={project.title} description={project.description} iconClass={project.iconClass} />
+                            <Projects
+                                key={index}
+                                img={project.img}
+                                url={project.url}
+                                title={project.title}
+                                description={project.description}
+                                iconClass={project.iconClass}
+                            />
                         ))
                     }
-
                 </div>
                 <div className="btn-box">
                     <Button type="dark" text="All Recent Projects" url="/projects" />

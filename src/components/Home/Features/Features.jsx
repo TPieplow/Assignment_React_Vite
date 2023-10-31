@@ -24,7 +24,12 @@ const Features = () => {
             <div className="advice">
                 {
                      features.map(( feature, index ) => 
-                        <Feature key={ index } iconClass={ feature.iconClass } title={ feature.title } description={ feature.description } />
+                        <Feature
+                            key={ index }
+                            iconClass={ feature.iconClass }
+                            title={ feature.title }
+                            description={ feature.description }
+                        />
                      )
                 }
             </div>

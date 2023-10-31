@@ -57,13 +57,15 @@ const Footer = () => {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat obcaecati voluptas voluptates! Voluptates laborum nam ratione minus necessitatibus, iure praesentium.</p>
           </div>
           <div className="info">
-            
             {
                 footerLinks.map((footerLink, index) => (
-                  <FooterLinks key={ index } title={ footerLink.title } links={ footerLink.links } />
+                  <FooterLinks
+                      key={ index }
+                      title={ footerLink.title }
+                      links={ footerLink.links }
+                  />
                 ))
             }
-          
           </div>
         </div>
       </div>
