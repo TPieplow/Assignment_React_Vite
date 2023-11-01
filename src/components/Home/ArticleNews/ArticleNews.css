@@ -2,20 +2,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
 }
 .article-news .container .title-part .section-title {
   padding-bottom: 20px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .article-news .container .title-part .section-title {
+    text-align: left;
+  }
 }
 @media (min-width: 1200px) {
   .article-news .container .title-part {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  }
-}
-@media (min-width: 1200px) and (min-width: 1200px) {
-  .article-news .container .title-part {
+    align-items: left;
     text-align: left;
   }
 }
@@ -34,6 +35,7 @@
   padding-bottom: 50px;
   -moz-column-gap: 30px;
        column-gap: 30px;
+  text-align: center;
 }
 @media (min-width: 992px) {
   .article-news .container .content-news {

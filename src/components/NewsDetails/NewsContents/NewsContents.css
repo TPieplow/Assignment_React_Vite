@@ -1,0 +1,166 @@
+section .newscontents {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 140px;
+  padding: 15px;
+}
+@media (min-width: 1400px) {
+  section .newscontents {
+    line-height: 1.5;
+    margin-top: 140px;
+    display: flex;
+    gap: 40px;
+    text-align: left;
+  }
+}
+section .newscontents .title {
+  font-size: 45px;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 30px;
+}
+section .newscontents .articleInfo {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 45px;
+}
+section .newscontents .articleInfo i {
+  color: #F9D783;
+}
+section .newscontents .imgContainer {
+  margin-bottom: 45px;
+}
+section .newscontents .quotation {
+  margin: 80px 0;
+  display: flex;
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+}
+@media (min-width: 1200px) {
+  section .newscontents .quotation {
+    padding-right: 60px;
+  }
+}
+section .newscontents .quotation .fa-sharp {
+  font-size: 45px;
+}
+section .newscontents .quotation .quoteText {
+  margin: 25px;
+}
+section .newscontents .categorys {
+  margin-top: 40px;
+  margin-bottom: 65px;
+}
+section .newscontents .categorys .category {
+  text-decoration: none;
+  margin-right: 25px;
+  border: 1px solid #F0EFE9;
+  border-radius: 25px;
+  padding: 15px 25px;
+  color: #191919;
+  background-color: #F0EFE9;
+}
+section .newscontents .categorys .category:hover {
+  background-color: #191919;
+  color: #F0EFE9;
+}
+section .newscontents .searchBar {
+  margin-top: 140px;
+  margin-left: 50px;
+}
+section .newscontents .searchBar .searchContainer {
+  position: relative;
+  display: inline-block;
+}
+section .newscontents .searchBar .searchContainer input[type=search] {
+  padding-right: 200px;
+}
+@media (min-width: 1200px) {
+  section .newscontents .searchBar .searchContainer input[type=search] {
+    padding-right: 120px;
+  }
+}
+section .newscontents .searchBar .searchContainer .fa-magnifying-glass {
+  position: absolute;
+  left: 15px;
+  top: 15%;
+  font-size: 1.5rem;
+}
+section .newscontents .searchBar input {
+  border: none;
+  border-radius: 25px;
+  padding: 10px 50px;
+  background-color: #F0EFE9;
+  margin-bottom: 25px;
+}
+section .newscontents .searchBar .recentPosts {
+  border: 2px solid #F0EFE9;
+  padding: 25px;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 50px;
+}
+section .newscontents .searchBar .recentPosts .titleSidebar {
+  position: relative;
+  padding-bottom: 5px;
+}
+section .newscontents .searchBar .recentPosts .titleSidebar::after {
+  content: "";
+  position: absolute;
+  bottom: 29px;
+  left: 0;
+  width: 20%;
+  height: 2px;
+  background-color: black;
+}
+section .newscontents .searchBar .recentPosts h5 {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 22px;
+}
+section .newscontents .searchBar .recentPosts .subtitle {
+  font-weight: 600;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #F0EFE9;
+}
+section .newscontents .searchBar .recentPosts .subtitle:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+section .newscontents .searchBar .recentPosts .subtitle div {
+  margin-bottom: 15px;
+}
+section .newscontents .searchBar .recentPosts .subtitle p {
+  font-weight: 400;
+}
+section .newscontents .searchBar .categories {
+  border: 2px solid #F0EFE9;
+  padding: 25px;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: gray;
+}
+section .newscontents .searchBar .categories .titleSidebar {
+  position: relative;
+  padding-bottom: 5px;
+}
+section .newscontents .searchBar .categories .titleSidebar::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 20%;
+  height: 2px;
+  background-color: black;
+}
+section .newscontents .searchBar .categories span {
+  color: #191919;
+}
+section .newscontents .searchBar .categories h5 {
+  color: #191919;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 20px;
+}

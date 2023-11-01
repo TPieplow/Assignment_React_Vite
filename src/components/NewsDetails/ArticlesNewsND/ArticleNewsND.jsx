@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-// import '../ArticleNews.css';
+import '../../Home/ArticleNews/ArticleNews.css';
 import './ArticlesNewsND.css';
 
 import Button from '#button';
