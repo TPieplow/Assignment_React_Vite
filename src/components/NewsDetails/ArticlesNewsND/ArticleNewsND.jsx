@@ -39,6 +39,7 @@ const ArticleNewsND = () => {
                         articles.map((article) => (
                             <Articles
                                 key={ article.id }
+                                id={article.id}
                                 img={ article.imageUrl }
                                 title={ article.title }
                                 content={ article.content }

@@ -17,8 +17,13 @@ const ArticleNewsNews = () => {
     const getArticles = async () => {
         try {
             const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles');
-            const articleData = await result.json();
-            setArticles(articleData);
+
+            if (result.ok) {
+                const articleData = await result.json();
+                setArticles(articleData);
+            } else {
+                console.error('Error: Unexpected status code -', result.status)
+            }
         } catch (error) {
             console.error('Error fetching articles', error);
         }
@@ -33,17 +38,20 @@ const ArticleNewsNews = () => {
                     </div>
                 </div>
                 <div className="content-news">
-                    {
-                        articles.map((article) => (
-                            <ArticleNews 
-                                key={ article.id }
-                                img={ article.imageUrl }
-                                title={ article.title }
-                                content={ article.content }
-                                category={ article.category }
+                    {articles ? (
+                        articles.map(article => (
+                            <ArticleNews
+                                key={article.id}
+                                id={article.id}
+                                img={article.imageUrl}
+                                title={article.title}
+                                content={article.content}
+                                category={article.category}
                             />
                         ))
-                    }
+                    ) : (
+                        <p>No articles available</p>
+                    )}
                 </div>
                 <div className="chevron-slider">
                     <div className="chevron chevron-left" id="prev">&lt;</div>

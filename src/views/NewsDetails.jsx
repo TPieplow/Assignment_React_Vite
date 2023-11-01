@@ -9,15 +9,13 @@ import ArticleNewsND from '../components/NewsDetails/ArticlesNewsND/ArticleNewsN
 const NewsDetails = () => {
   return (
     <div className="wrapper">
-
     <HeaderND />
     <ShowCaseND />
+    <main>
     <NewsContents />
     <ArticleNewsND />
-    
-    <main>
       
-      
+
     </main>
     <Footer />
 

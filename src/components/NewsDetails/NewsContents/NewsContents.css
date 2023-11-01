@@ -6,12 +6,15 @@ section .newscontents {
 }
 @media (min-width: 1400px) {
   section .newscontents {
-    line-height: 1.5;
+    line-height: 2;
     margin-top: 140px;
     display: flex;
     gap: 40px;
     text-align: left;
   }
+}
+section .newscontents .articleContent {
+  padding-right: 30px;
 }
 section .newscontents .title {
   font-size: 45px;
@@ -96,6 +99,7 @@ section .newscontents .searchBar input {
 section .newscontents .searchBar .recentPosts {
   border: 2px solid #F0EFE9;
   padding: 25px;
+  padding-right: 40px;
   font-family: "DM Sans", sans-serif;
   margin-bottom: 50px;
 }
@@ -108,7 +112,7 @@ section .newscontents .searchBar .recentPosts .titleSidebar::after {
   position: absolute;
   bottom: 29px;
   left: 0;
-  width: 20%;
+  width: 15%;
   height: 2px;
   background-color: black;
 }
@@ -151,7 +155,7 @@ section .newscontents .searchBar .categories .titleSidebar::after {
   position: absolute;
   bottom: 5px;
   left: 0;
-  width: 20%;
+  width: 15%;
   height: 2px;
   background-color: black;
 }

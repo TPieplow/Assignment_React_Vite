@@ -1,10 +1,9 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
-const ArticleNews = ({ url, img, title, content, author, published, category, alt }) => {
+const ArticleNews = ({ id, url, img, title, content, author, published, category, alt }) => {
   return (
-    <Link to="/newsDetails" className="text-wrapper">
+    <Link key={ id } to={`/news/${ id }`} className="text-wrapper">
       <img className="articleImg" src={img} alt={alt} loading="lazy" />
       <p>{ category }</p>
       <h3 >{ title }</h3>

@@ -1,24 +1,28 @@
-import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { NewsContect } from '../../../generics/NewsContect'
 
 import './NewsContents.css'
 
 
 const NewsContents = () => {
-  const [articles, setArticles] = useState([]);
+  const { id } = useParams();
+  const [articles, setArticles] = useState(null);
 
   useEffect(() => {
     getArticles()
-  }, [])
+  }, [id])
 
   const getArticles = async () => {
-    try {
-      const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles');
-      const articlesData = await result.json();
-      setArticles(articlesData.slice(0, 1));
-    } catch (error) {
-      console.error('Error fetching articles', error);
+    if (id !== undefined) {
+      try {
+        const result = await fetch(`https://win23-assignment.azurewebsites.net/api/articles/${id}`);
+        const articlesData = await result.json();
+        setArticles(articlesData);
+      } catch (error) {
+        console.error('Error fetching articles', error);
+      }
     }
   };
 
@@ -26,17 +30,18 @@ const NewsContents = () => {
     <section>
       <div className='container newscontents'>
         <div className='maincontent'>
-          {
-            articles.map((article) => (
-              <NewsContect
-                key={article.id}
-                title={article.title}
-                published={article.published}
-                category={article.category}
-                author={article.author}
-                img={article.imageUrl}
-              />
-            ))
+          {articles ? (
+            <NewsContect
+              key={articles.id}
+              title={articles.title}
+              published={articles.published}
+              category={articles.category}
+              author={articles.author}
+              img={articles.imageUrl}
+            />
+          ) : (
+            <p>No articles found</p>
+          )
           }
           <div className='articleContent'>
             <p>
@@ -54,7 +59,7 @@ const NewsContents = () => {
               Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.</p>
           </div>
           <div className='quotation'>
-            <i class="fa-sharp fa-solid fa-quote-right"></i>
+            <i className="fa-sharp fa-solid fa-quote-right"></i>
             <div className='quoteText'>
               <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
             </div>
@@ -74,11 +79,11 @@ const NewsContents = () => {
         <div className='searchBar'>
           <div className='searchContainer'>
             <input type="search" placeholder='Type to search...' />
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i className="fa-solid fa-magnifying-glass"></i>
           </div>
           <div className='recentPosts'>
             <div className='titleSidebar'>
-            <h5>Recent Posts</h5>
+              <h5>Recent Posts</h5>
             </div>
             <div className='subtitle'>
               <div>How To Blow Through Capital At An Incredible Rate</div>
@@ -99,7 +104,7 @@ const NewsContents = () => {
           </div>
           <div className='categories'>
             <div>
-            <h5 className='titleSidebar'>Categories</h5>
+              <h5 className='titleSidebar'>Categories</h5>
             </div>
             <p><span>Technology </span>- 20 posts</p>
             <p><span>Freelancing</span> - 07 Posts</p>

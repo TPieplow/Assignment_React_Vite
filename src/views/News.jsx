@@ -10,7 +10,6 @@ import NewsLetterNews from '#components/News/NewsLetterNews/NewsLetterNews';
 const News = () => {
   return (
     <div className="wrapper">
-
     <HeaderNews />
     <ShowcaseNews />
     <main>
@@ -18,7 +17,6 @@ const News = () => {
       <NewsLetterNews />
     </main>
     <Footer />
-
   </div>
   )
 }
