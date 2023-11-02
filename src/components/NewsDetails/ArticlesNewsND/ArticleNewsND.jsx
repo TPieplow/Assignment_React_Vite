@@ -10,6 +10,7 @@ import Articles from '../../../generics/Articles'
 
 const ArticleNewsND = () => {
     const [articles, setArticles] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         getArticles()
@@ -22,6 +23,29 @@ const ArticleNewsND = () => {
             setArticles(articleData.slice(0, 3));
         } catch (error) {
             console.error('Error fetching articles', error);
+        }
+    };
+
+    const loadMoreArticles = async () => {
+        if (!loading) {
+            setLoading(true);
+            try {
+                const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles');
+                const articleData = await result.json();
+
+                const articlesToShow = 3;
+
+                const start = articles.length;
+                const end = start + articlesToShow;
+
+                const nextArticles = articleData.slice(start, end);
+                
+                setArticles(prevArticles => [...prevArticles, ...nextArticles]);
+            } catch (error) {
+                console.error('Error fetching more articles', error);
+            } finally {
+                setLoading(false);
+            }
         }
     };
 
@@ -48,12 +72,8 @@ const ArticleNewsND = () => {
                         ))
                     }
                 </div>
-                <div className="ring-container">
-                    <div className="ring ring-1"></div>
-                    <div className="ring"></div>
-                    <div className="ring"></div>
-                    <div className="ring"></div>
-                    <div className="ring"></div>
+                <div className="ring-container" onClick={loadMoreArticles}>
+                    <Button type="dark" text="More Articles" />
                 </div>
             </div>
         </section>
