@@ -14,8 +14,6 @@ const NewsDetails = () => {
     <main>
     <NewsContents />
     <ArticleNewsND />
-      
-
     </main>
     <Footer />
 

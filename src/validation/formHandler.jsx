@@ -1,9 +1,9 @@
 import React from 'react'
 
-const formHandler = () => {
+const FormHandler = () => {
   return (
-    <div>formHandler</div>
+    <div>FormHandler</div>
   )
 }
 
-export default formHandler
+export default FormHandler

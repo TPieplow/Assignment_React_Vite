@@ -13,12 +13,14 @@ import Contact from './views/Contact';
 import News from './views/News';
 import NewsDetails from './views/NewsDetails';
 import NotFound from './views/NotFound';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
   return (
     <div className="wrapper">
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
@@ -32,3 +34,4 @@ function App() {
 }
 
 export default App;
+

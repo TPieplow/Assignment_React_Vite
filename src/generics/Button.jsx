@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link } from 'react-router-dom';
 
-const Button = ({ type, text, url }) => {
+const Button = React.forwardRef(({ type, text, url }, ref) => {
 
     const getButtonClassName = () => {
         switch (type) {
@@ -16,11 +16,11 @@ const Button = ({ type, text, url }) => {
     }
 
     return (
-        <Link className={ getButtonClassName() } to={ url }>
+        <Link className={ getButtonClassName() } to={ url } ref={ref}>
             { text }
             <i className="fa-regular fa-arrow-up-right"></i>
         </Link>
     )
-}
+});
 
 export default Button
