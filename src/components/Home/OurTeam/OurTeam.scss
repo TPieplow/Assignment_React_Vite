@@ -5,15 +5,20 @@
         
         .title-wrapper {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
-
+            align-items: center;
+            
+            @media (min-width:1200px) {
+                flex-direction: row;
+            }
 
             .section-title {
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-gap: 20px;
                 text-align: center;
+                
                 
                 @media (min-width: 1200px) {
                     
@@ -27,9 +32,14 @@
             }
             
             .btn-yellow {
+                margin-top: -50px;
+                margin-bottom: 50px;
                 border: 1px solid #191919;
-                margin-top: 170px;
-                margin-bottom: 100px;
+                display: flex;
+
+                @media (min-width: 1200px) {
+                    margin-top: 0;
+                }
             }
         } 
         

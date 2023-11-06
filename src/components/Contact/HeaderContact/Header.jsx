@@ -3,13 +3,14 @@ import { NavLink, Link } from 'react-router-dom';
 
 import '#components/Home/Header/Header.css';
 import CritoLogo from '#images/logo_crito.svg';
+import MenuToggle from '../../Home/Header/Navigation/MenuToggle';
 
 const HeaderContact = () => {
     return (
         <header>
             <div className="container">
                 <Link to="index.html"><img src={CritoLogo} alt="crito logo" /></Link>
-                <button className="menu-bars"><i className="fa-solid fa-bars-staggered" title="folded menu-bar"></i></button>
+                <MenuToggle />
                 <div className="menu">
                     <div className="top-menu">
                         <div className="contact-info">

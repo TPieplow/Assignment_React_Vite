@@ -4,13 +4,15 @@ import { NavLink, Link } from 'react-router-dom';
 import './Navigation.css'
 import Button from '#button'
 import img_logotype from '#images/logo_crito.svg'
+import MenuToggle from './MenuToggle';
+
 
 const Navigation = () => {
   return (
     <section className="nav-section">
       <div className="container">
         <Link to="/"><img src={ img_logotype } alt="crito logo" /></Link>
-        <button className="menu-bars"><i className="fa-solid fa-bars-staggered"></i></button>
+        <MenuToggle />
         <div className="menu">
           <div className="top-menu">
             <div className="contact-info">

@@ -62,7 +62,7 @@ body {
 .btn-yellow:hover {
   background-color: #191919;
   border: 1px solid #191919;
-  color: #F0EFE9;
+  color: #F0EFE9 !important;
   transition: 0.3s ease-in-out;
 }
 
@@ -155,7 +155,7 @@ body {
 .btn-transparent:hover {
   background-color: #191919;
   border: 1px solid #191919;
-  color: #F0EFE9;
+  color: #F0EFE9 !important;
   transition: 0.3s ease-in-out;
 }
 

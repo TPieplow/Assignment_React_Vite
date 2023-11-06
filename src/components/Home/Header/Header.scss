@@ -1,7 +1,6 @@
 header {
     background-color: #F0EFE9;
     padding-top: 16px;
-    
 
     .container {
         display: flex;
@@ -9,11 +8,63 @@ header {
         justify-content: space-between;
         gap: 70px;
 
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            gap: 40px
+        }
+
+        // För mobilmenyn
+        .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background-color: #ddc53b;
+            z-index: 4;
+            
+            a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: 20px;
+                border-bottom: 1px solid black;
+
+                &:hover {
+                    color: black;
+                }
+
+                &.active {
+                    background-color: black;
+                }
+            }
+        }
+        
+        .btn-menu {
+            background-color: transparent;
+            position: fixed;
+            right: 50px;
+            color: #191919;
+            z-index: 5;
+            border: none;
+            font-size: 2em;
+
+            @media (min-width: 992px) {
+                display: none;
+            }
+            
+        }
+        //Slutar här
 
         .menu-bars {
             border: none;
             font-size: 25px;
             background-color: transparent;
+            z-index: 0;
 
             @media (min-width: 992px) {
                 display: none;
