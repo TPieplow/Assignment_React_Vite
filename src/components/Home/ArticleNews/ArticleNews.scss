@@ -45,6 +45,18 @@
                 display: flex;
                 text-align: left;
             }
+
+            .imgContainer {
+                position: relative;
+    
+                .banner {
+                    position: absolute;
+                    background-color: #F9D783;
+                    padding: 10px;
+                    top: 25px;
+                    left: 15px;
+                }
+            }
             
             img {
                 max-width: 100%;

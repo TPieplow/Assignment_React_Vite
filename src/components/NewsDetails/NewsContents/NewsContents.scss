@@ -43,6 +43,15 @@ section {
 
         .imgContainer {
             margin-bottom: 45px;
+            position: relative;
+
+            .banner {
+                position: absolute;
+                background-color: #F9D783;
+                padding: 15px;
+                top: 15px;
+                left: 15px;
+            }
         }
 
         .quotation {
@@ -104,7 +113,7 @@ section {
                     @media (min-width: 1200px) {
                         padding-right: 120px;
                     }
-                    
+
                 }
 
                 .fa-magnifying-glass {
@@ -144,7 +153,7 @@ section {
                         background-color: black;
                     }
                 }
-                
+
                 h5 {
                     margin-bottom: 25px;
                     font-weight: 700;
@@ -209,6 +218,6 @@ section {
                 }
             }
         }
-       
+
     }
 }

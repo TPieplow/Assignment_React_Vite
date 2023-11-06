@@ -16,9 +16,19 @@ body {
   justify-content: center;
   text-align: left;
 }
-.article-news .container .articleImg {
+.article-news .container .imgContainer {
+  position: relative;
+}
+.article-news .container .imgContainer .articleImg {
   height: 234px;
   width: 382px;
+}
+.article-news .container .imgContainer .banner {
+  position: absolute;
+  background-color: #F9D783;
+  padding: 10px;
+  top: 25px;
+  left: 15px;
 }
 .article-news .container .chevron-slider {
   display: flex;

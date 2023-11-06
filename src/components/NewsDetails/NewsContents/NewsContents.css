@@ -37,6 +37,14 @@ section .newscontents .articleInfo i {
 }
 section .newscontents .imgContainer {
   margin-bottom: 45px;
+  position: relative;
+}
+section .newscontents .imgContainer .banner {
+  position: absolute;
+  background-color: #F9D783;
+  padding: 15px;
+  top: 15px;
+  left: 15px;
 }
 section .newscontents .quotation {
   margin: 80px 0;

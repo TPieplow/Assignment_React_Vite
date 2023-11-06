@@ -7,8 +7,10 @@ const Articles = ({ id ,url, img, title, content, author, published, category, a
   const formattedPublished = formatPublishedDate(published)
   return (
     <Link key={ id } to={`/news/${ id }`} className="text-wrapper">
+      <div className='imgContainer'>
       <img className="articleImg" src={ img } alt={ alt } loading="lazy" />
-      <div className=''> {formattedPublished} </div>
+      <div className='banner'> {formattedPublished} </div>
+      </div>
       <p>{ category }</p>
       <h3 >{ title }</h3>
       <p>{ author }</p>
