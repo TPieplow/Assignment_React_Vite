@@ -1,6 +1,7 @@
 import React from 'react'
 
-import Showcases from '../../generics/Showcases';
+import Showcases from '../../../generics/Showcases';
+import './ShowCaseND.css'
 
 const ShowCaseND = () => {
     const showcases = [

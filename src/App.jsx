@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="wrapper">
       <BrowserRouter>
-      <ScrollToTop />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />

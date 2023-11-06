@@ -40,6 +40,7 @@ const ArticleNews = () => {
                                 key={ article.id }
                                 id={article.id}
                                 img={ article.imageUrl }
+                                published={article.published}
                                 title={ article.title }
                                 content={ article.content }
                                 category={ article.category }

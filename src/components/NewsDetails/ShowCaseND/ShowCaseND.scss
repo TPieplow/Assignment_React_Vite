@@ -1,0 +1,40 @@
+.showcase {
+    background-color: #F0EFE9;
+    position: relative;
+
+    .sc-white-stroke {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+        
+        .content {
+            text-align: center;
+            margin-top: 105px;
+            margin-bottom: 95px;
+            
+            a {
+                text-decoration: none;
+                color: #191919;
+                
+                &:hover {
+                    font-weight: 500;
+                }
+            }
+            
+            h1 {
+                font-size: 74px;
+            }
+        }
+    }
+}

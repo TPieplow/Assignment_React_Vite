@@ -53,7 +53,8 @@ const ArticleNewsND = () => {
                     const end = start + articlesToShow;
                     const nextArticles = articleData.slice(start, end);
 
-                    setArticles(prevArticles => [...prevArticles, ...nextArticles]);
+                    setArticles(prevArticles => [...prevArticles, ...nextArticles]);  
+
                     if (articles.length + articlesToShow >= maxArticles) {
                         if (showMoreRef.current) {
                             showMoreRef.current.innerText = 'Show Less';
@@ -100,6 +101,7 @@ const ArticleNewsND = () => {
                                 key={article.id}
                                 id={article.id}
                                 img={article.imageUrl}
+                                published={article.published}
                                 title={article.title}
                                 content={article.content}
                                 category={article.category}
@@ -116,3 +118,8 @@ const ArticleNewsND = () => {
 }
 
 export default ArticleNewsND
+
+
+
+
+
