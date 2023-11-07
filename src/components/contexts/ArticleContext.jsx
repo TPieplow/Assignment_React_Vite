@@ -22,6 +22,12 @@ export const ArticleProvider = ({ children }) => {
         setArticlesContext(articlesData)
     }
 
+    const getThreeArticles = async () => {
+        const result = await fetch(apiUrl);
+        const articlesData = await result.json();
+        setArticleContext(articlesData.slice(0, 3));
+    }
+
     const getArticle = async (id) => {
         const result = await fetch(`${apiUrl}/${id}`)
         const articleData = await result.json()
@@ -47,7 +53,7 @@ export const ArticleProvider = ({ children }) => {
     }
 
     return (
-        <ArticleContext.Provider value={{ articlesContext, getArticles, articleContext, getArticle, clearArticles }}>
+        <ArticleContext.Provider value={{ articlesContext, getArticles, articleContext, getArticle, clearArticles, getThreeArticles }}>
             {children}
         </ArticleContext.Provider>
     )
