@@ -1,22 +1,37 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import './ArticleNewsNews.css'
 import ArticleNews from '../../../generics/ArticleNews';
 import ImageCarousel from './ImgCarousel';
-import { useArticlesContext } from '../../contexts/ArticleContext';
 
 
 
 const ArticleNewsNews = () => {
-    const { articlesContext, getArticles, clearArticles } = useArticlesContext()
+    // const { articlesContext, clearArticlesContext } = useArticlesContext()
     // const {id} = useParams()
-    // const [articles, setArticles] = useState([]);
+    const [articles, setArticles] = useState([]);
 
     useEffect(() => {
         getArticles()
-        return () => clearArticles()
+
+        // return () => clearArticles()
     }, []);
+
+    const getArticles = async () => {
+        try {
+            const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles');
+
+            if (result.ok) {
+                const articleData = await result.json();
+                setArticles(articleData);
+            } else {
+                console.error('Error: Unexpected status code -', result.status)
+            }
+        } catch (error) {
+            console.error('Error fetching articles', error);
+        }
+    };
 
     return (
         <section className="article-news">
@@ -27,8 +42,8 @@ const ArticleNewsNews = () => {
                     </div>
                 </div>
                 <div className="content-news">
-                    {articlesContext ? (
-                        articlesContext.map(article => (
+                    {articles ? (
+                        articles.map(article => (
                             <ArticleNews
                                 key={article.id}
                                 id={article.id}
@@ -39,10 +54,8 @@ const ArticleNewsNews = () => {
                                 category={article.category}
                             />
                         ))
-                    ) 
-                    :
-                    (
-                        <p>No available articles</p>
+                    ) : (
+                        <p>No articles available</p>
                     )}
                 </div>
                 <div className="chevron-slider">

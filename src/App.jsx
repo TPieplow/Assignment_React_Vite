@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="wrapper">
       <BrowserRouter>
-        {/* <ArticleProvider> */}
+        <ArticleProvider>
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -30,7 +30,7 @@ function App() {
             <Route path="/news/:id" element={<NewsDetails />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        {/* </ArticleProvider> */}
+        </ArticleProvider>
       </BrowserRouter>
     </div>
   );

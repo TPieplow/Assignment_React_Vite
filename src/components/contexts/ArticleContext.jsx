@@ -2,12 +2,12 @@ import { useContext, createContext, useState, useEffect } from "react";
 
 
 const ArticleContext = createContext();
-export const useArticles = () => useContext(ArticleContext);
+export const useArticlesContext = () => useContext(ArticleContext);
 
 export const ArticleProvider = ({ children }) => {
     const apiUrl = "https://win23-assignment.azurewebsites.net/api/articles"
-    const [articles, setArticles] = useState([]);
-    const [article, setArticle] = useState([]);
+    const [articlesContext, setArticlesContext] = useState([]);
+    const [articleContext, setArticleContext] = useState(null);
 
     //Create contact? 
 
@@ -18,21 +18,36 @@ export const ArticleProvider = ({ children }) => {
     const getArticles = async () => {
         const result = await fetch(apiUrl)
         const articlesData = await result.json()
-        setArticles(articlesData)
+        console.log(articlesData)
+        setArticlesContext(articlesData)
     }
 
     const getArticle = async (id) => {
         const result = await fetch(`${apiUrl}/${id}`)
         const articleData = await result.json()
-        setArticles(articleData)
+        setArticleContext(articleData)
+    }
+
+    const createArticle = async (articleContext) => {
+        const result = await fetch(`${apiUrl}`, {
+            method: 'post',
+            headers: {
+                'content_type': 'application.json'
+            },
+            body: JSON.stringify(product)
+        })
+
+        if (result.status === 201) {
+            setArticleContext(await result.json())
+        }
     }
 
     const clearArticles = () => {
-        setArticles(null)
+        setArticlesContext(null)
     }
 
     return (
-        <ArticleContext.Provider value={{articles, getArticles, article, getArticle, clearArticles}}>
+        <ArticleContext.Provider value={{ articlesContext, getArticles, articleContext, getArticle, clearArticles }}>
             {children}
         </ArticleContext.Provider>
     )

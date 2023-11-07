@@ -20,8 +20,14 @@ body {
   position: relative;
 }
 .article-news .container .imgContainer .articleImg {
-  height: 234px;
-  width: 382px;
+  width: 100%;
+  max-height: 372px;
+}
+@media (min-width: 992px) {
+  .article-news .container .imgContainer .articleImg {
+    height: 250px;
+    width: 382px;
+  }
 }
 .article-news .container .imgContainer .banner {
   position: absolute;
@@ -73,7 +79,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .article-news .container .content-news {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
