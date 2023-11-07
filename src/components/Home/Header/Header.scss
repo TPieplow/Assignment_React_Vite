@@ -20,19 +20,19 @@ header {
             text-align: center;
             position: fixed;
             top: 0;
-            bottom: 0;
+            bottom: 70%;
             left: 0;
             right: 0;
             padding: 20px;
-            background-color: #ddc53b;
+            background-color: #F9D783;
             z-index: 4;
             
             a {
-                color: white;
+                color: #191919;
                 text-decoration: none;
                 display: block;
                 padding: 20px;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid #191919;
 
                 &:hover {
                     color: black;
@@ -40,6 +40,7 @@ header {
 
                 &.active {
                     background-color: black;
+                    color: white;
                 }
             }
         }

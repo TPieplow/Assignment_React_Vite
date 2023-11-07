@@ -7,11 +7,14 @@ import ImageCarousel from './ImgCarousel';
 
 
 const ArticleNewsNews = () => {
-
+    // const { articles, clearArticles } = useArticles()
+    // const {id} = useParams()
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
         getArticles()
+
+        // return () => clearArticles()
     }, []);
 
     const getArticles = async () => {
