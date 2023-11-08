@@ -18,7 +18,6 @@ const ArticleNews = () => {
     useEffect(() => {
        if (articlesContext) {
             getArticles(3)
-            console.log(articlesContext)
             setUpdateToThreeArticles(false)
             return () => clearArticles()
         }

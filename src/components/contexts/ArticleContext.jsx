@@ -5,9 +5,11 @@ const ArticleContext = createContext();
 export const useArticlesContext = () => useContext(ArticleContext);
 
 export const ArticleProvider = ({ children }) => {
-    const apiUrl = "https://win23-assignment.azurewebsites.net/api/articles"
+    const apiUrlGet = "https://win23-assignment.azurewebsites.net/api/articles";
+
     const [articlesContext, setArticlesContext] = useState([]);
     const [articleContext, setArticleContext] = useState(null);
+   
 
     //Create contact? 
 
@@ -17,7 +19,7 @@ export const ArticleProvider = ({ children }) => {
 
     const getArticles = async (limit) => {
         try {
-            const result = await fetch(apiUrl)
+            const result = await fetch(apiUrlGet)
             if (!result.ok) {
                 throw new Error(`Server responded with status: ${result.status}`)
             }
@@ -34,7 +36,7 @@ export const ArticleProvider = ({ children }) => {
 
     const getArticle = async (id) => {
         try {
-            const result = await fetch(`${apiUrl}/${id}`)
+            const result = await fetch(`${apiUrlGet}/${id}`)
             if (!result.ok) {
                 throw new Error(`Server responded with status: ${result.status}`)
             }
@@ -45,19 +47,30 @@ export const ArticleProvider = ({ children }) => {
         }
     }
 
-    const createArticle = async (articleContext) => {
-        const result = await fetch(`${apiUrl}`, {
-            method: 'post',
-            headers: {
-                'Content_Type': 'application.json'
-            },
-            body: JSON.stringify(product)
-        })
 
-        if (result.status === 201) {
-            setArticleContext(await result.json())
-        }
-    }
+    // const postContactForm = async (values) => {
+    //     try {
+    //         const result = await fetch (`${apiUrlPost}`, {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(values)
+    //         })
+    //         if (result.ok) {
+    //             const formData = await result.json();
+    //             setValidateForm(formData);
+    //             //meddelande
+    //         } else {
+    //             const errorData = await result.text();
+    //             console.error("Cant post form: ", result.status, errorData)
+    //             //meddelande
+    //         }
+    //     } catch (error) {
+    //         console.error("Couldnt post contact form: ", error)
+    //         //meddelande
+    //     }
+    // }
 
     const clearArticles = () => {
         setArticlesContext([])

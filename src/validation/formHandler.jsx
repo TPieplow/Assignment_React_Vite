@@ -1,9 +1,9 @@
-import React from 'react'
 
-const FormHandler = () => {
-  return (
-    <div>FormHandler</div>
-  )
-}
+import * as Yup from 'yup';
 
-export default FormHandler
+
+const validation = Yup.object().shape({
+  name: Yup.string().required('Name is required'),
+  email: Yup.string().required('Email is required'),
+  message: Yup.string().required('Text message is required')
+})
