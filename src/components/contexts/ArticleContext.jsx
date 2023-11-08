@@ -6,12 +6,8 @@ export const useArticlesContext = () => useContext(ArticleContext);
 
 export const ArticleProvider = ({ children }) => {
     const apiUrlGet = "https://win23-assignment.azurewebsites.net/api/articles";
-
     const [articlesContext, setArticlesContext] = useState([]);
     const [articleContext, setArticleContext] = useState(null);
-   
-
-    //Create contact? 
 
     useEffect(() => {
         getArticles()
@@ -33,7 +29,6 @@ export const ArticleProvider = ({ children }) => {
         }
     }
 
-
     const getArticle = async (id) => {
         try {
             const result = await fetch(`${apiUrlGet}/${id}`)
@@ -46,31 +41,6 @@ export const ArticleProvider = ({ children }) => {
             console.error("Failed to fetch articles:", error)
         }
     }
-
-
-    // const postContactForm = async (values) => {
-    //     try {
-    //         const result = await fetch (`${apiUrlPost}`, {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify(values)
-    //         })
-    //         if (result.ok) {
-    //             const formData = await result.json();
-    //             setValidateForm(formData);
-    //             //meddelande
-    //         } else {
-    //             const errorData = await result.text();
-    //             console.error("Cant post form: ", result.status, errorData)
-    //             //meddelande
-    //         }
-    //     } catch (error) {
-    //         console.error("Couldnt post contact form: ", error)
-    //         //meddelande
-    //     }
-    // }
 
     const clearArticles = () => {
         setArticlesContext([])
