@@ -1,7 +1,7 @@
 import React from 'react';
 import formatPublishedDate from './FormatDate';
 
-export const NewsContect = ({ url, img, title, content, author, published, category, alt }) => {
+export const NewsContect = ({ url, img, title, content, author, published, category, alt, id }) => {
     const formattedPublished = formatPublishedDate(published)
     return (
         <div>

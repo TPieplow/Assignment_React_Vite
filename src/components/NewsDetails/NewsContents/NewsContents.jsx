@@ -4,41 +4,33 @@ import { useParams } from 'react-router-dom';
 import { NewsContect } from '../../../generics/NewsContect'
 
 import './NewsContents.css'
-
+import { useArticlesContext } from '../../contexts/ArticleContext';
 
 
 const NewsContents = () => {
+  const { articleContext, getArticle } = useArticlesContext()
   const { id } = useParams();
-  const [articles, setArticles] = useState(null);
 
   useEffect(() => {
-    getArticles()
+    if (id) {
+      getArticle(id)
+    }
+    
   }, [id])
 
-  const getArticles = async () => {
-    if (id !== undefined) {
-      try {
-        const result = await fetch(`https://win23-assignment.azurewebsites.net/api/articles/${id}`);
-        const articlesData = await result.json();
-        setArticles(articlesData);
-      } catch (error) {
-        console.error('Error fetching articles', error);
-      }
-    }
-  };
 
   return (
     <section>
       <div className='container newscontents'>
         <div className='maincontent'>
-          {articles ? (
+          {articleContext ? (
             <NewsContect
-              key={articles.id}
-              title={articles.title}
-              published={articles.published}
-              category={articles.category}
-              author={articles.author}
-              img={articles.imageUrl}
+              key={articleContext.id}
+              title={articleContext.title}
+              published={articleContext.published}
+              category={articleContext.category}
+              author={articleContext.author}
+              img={articleContext.imageUrl}
             />
           ) : (
             <p>No articles found</p>

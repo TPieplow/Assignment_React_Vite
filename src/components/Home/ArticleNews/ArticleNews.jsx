@@ -1,28 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './ArticleNews.css';
 
 import Button from '#button';
 import SectionTitle from '#sectiontitle';
 import Articles from '../../../generics/Articles';
+import { useArticlesContext } from '../../contexts/ArticleContext';
 
 
 const ArticleNews = () => {
-    const [articles, setArticles] = useState([]);
+    const { articlesContext, getArticles, clearArticles } = useArticlesContext();
+    const [updateToThreeArticles, setUpdateToThreeArticles] = useState(true);
 
+    // Context got a limit variable, which let us call a certain number of articles to display
+    // getArticles(3) fetches 3 articles instead of the whole array
+    // setUpdateToThreeArticles is used to stop further rendering
     useEffect(() => {
-        getArticles()
-    }, []);
-
-    const getArticles = async () => {
-        try {
-            const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles')
-            const articleData = await result.json();
-            setArticles(articleData.slice(0, 3));
-        } catch (error) {
-            console.error('Error fetching articles', error);
+       if (articlesContext) {
+            getArticles(3)
+            console.log(articlesContext)
+            setUpdateToThreeArticles(false)
+            return () => clearArticles()
         }
-    };
+    }, [updateToThreeArticles]);
+
 
     return (
         <section className="article-news">
@@ -35,15 +36,15 @@ const ArticleNews = () => {
                 </div>
                 <div className="content-news">
                     {
-                        articles.map((article) => (
+                        articlesContext.map((article) => (
                             <Articles
-                                key={ article.id }
+                                key={article.id}
                                 id={article.id}
-                                img={ article.imageUrl }
+                                img={article.imageUrl}
                                 published={article.published}
-                                title={ article.title }
-                                content={ article.content }
-                                category={ article.category }
+                                title={article.title}
+                                content={article.content}
+                                category={article.category}
                             />
                         ))
                     }

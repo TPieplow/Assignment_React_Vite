@@ -15,30 +15,41 @@ export const ArticleProvider = ({ children }) => {
         getArticles()
     }, [])
 
-    const getArticles = async () => {
-        const result = await fetch(apiUrl)
-        const articlesData = await result.json()
-        console.log(articlesData)
-        setArticlesContext(articlesData)
+    const getArticles = async (limit) => {
+        try {
+            const result = await fetch(apiUrl)
+            if (!result.ok) {
+                throw new Error(`Server responded with status: ${result.status}`)
+            }
+            let articlesData = await result.json()
+            if (limit) {
+                articlesData = articlesData.slice(0, limit)
+            }
+            setArticlesContext(articlesData)
+        } catch (error) {
+            console.error("Failed to fetch articles:", error)
+        }
     }
 
-    const getThreeArticles = async () => {
-        const result = await fetch(apiUrl);
-        const articlesData = await result.json();
-        setArticleContext(articlesData.slice(0, 3));
-    }
 
     const getArticle = async (id) => {
-        const result = await fetch(`${apiUrl}/${id}`)
-        const articleData = await result.json()
-        setArticleContext(articleData)
+        try {
+            const result = await fetch(`${apiUrl}/${id}`)
+            if (!result.ok) {
+                throw new Error(`Server responded with status: ${result.status}`)
+            }
+            const articleData = await result.json()
+            setArticleContext(articleData)
+        } catch (error) {
+            console.error("Failed to fetch articles:", error)
+        }
     }
 
     const createArticle = async (articleContext) => {
         const result = await fetch(`${apiUrl}`, {
             method: 'post',
             headers: {
-                'content_type': 'application.json'
+                'Content_Type': 'application.json'
             },
             body: JSON.stringify(product)
         })
@@ -49,11 +60,11 @@ export const ArticleProvider = ({ children }) => {
     }
 
     const clearArticles = () => {
-        setArticlesContext(null)
+        setArticlesContext([])
     }
 
     return (
-        <ArticleContext.Provider value={{ articlesContext, getArticles, articleContext, getArticle, clearArticles, getThreeArticles }}>
+        <ArticleContext.Provider value={{ articlesContext, getArticles, articleContext, getArticle, clearArticles }}>
             {children}
         </ArticleContext.Provider>
     )
