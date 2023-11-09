@@ -12,6 +12,8 @@ const Button = React.forwardRef(({ type, text, url }, ref) => {
                 return 'btn-black';
             case 'transparent':
                 return 'btn-transparent';
+            case 'not-found':
+                return 'not-found';
         }
     }
 

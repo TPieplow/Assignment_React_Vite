@@ -5,18 +5,30 @@ import { NewsContect } from '../../../generics/NewsContect'
 
 import './NewsContents.css'
 import { useArticlesContext } from '../../contexts/ArticleContext';
+import Category from '../../../generics/Category';
+
 
 
 const NewsContents = () => {
-  const { articleContext, getArticle } = useArticlesContext()
+  const { articleContext, getArticle } = useArticlesContext();
+  const { articlesContext, getArticles, clearArticles } = useArticlesContext();
+  // const [updateToThreeArticles, setUpdateToThreeArticles] = useState(true);
+
   const { id } = useParams();
 
   useEffect(() => {
     if (id) {
       getArticle(id)
     }
-    
   }, [id])
+
+  useEffect(() => {
+    if (articlesContext) {
+      getArticles();
+      // setUpdateToThreeArticles(false);
+      return () => clearArticles();
+    }
+  }, [articleContext])
 
 
   return (
@@ -78,22 +90,16 @@ const NewsContents = () => {
             <div className='titleSidebar'>
               <h5>Recent Posts</h5>
             </div>
-            <div className='subtitle'>
-              <div>How To Blow Through Capital At An Incredible Rate</div>
-              <p>Jan 14, 2020</p>
-            </div>
-            <div className='subtitle'>
-              <div>Design Studios That Everyone Should Know About?</div>
-              <p>Jan 14, 2020</p>
-            </div>
-            <div className='subtitle'>
-              <div>How did we get 1M+ visitors in 30 days without anything!</div>
-              <p>Jan 14, 2020</p>
-            </div>
-            <div className='subtitle'>
-              <div>Figma On Figma: How We Built Our Website Design System</div>
-              <p>Jan 14, 2020</p>
-            </div>
+            {
+              articlesContext.slice(0, 4).map((article) => (
+                <Category
+                  key={article.id}
+                  id={article.id}
+                  title={article.title}
+                  published={article.published}
+                />
+              ))
+            }
           </div>
           <div className='categories'>
             <div>

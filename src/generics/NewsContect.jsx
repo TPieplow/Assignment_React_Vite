@@ -14,7 +14,7 @@ export const NewsContect = ({ url, img, title, content, author, published, categ
             </div>
             <div className='imgContainer'>
                 <div className="banner"> {formattedPublished} </div>
-                <img className='theImage' style={{}} src={img} alt="" />
+                <img className='theImage' src={img} alt="" />
             </div>
         </div>
     )

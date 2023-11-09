@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 const MenuToggle = ({ toggleMenu }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  console.log(isMenuOpen)
 
   return (
     <>

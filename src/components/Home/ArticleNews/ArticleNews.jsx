@@ -15,6 +15,7 @@ const ArticleNews = () => {
     // Context got a limit variable, which let us call a certain number of articles to display
     // getArticles(3) fetches 3 articles instead of the whole array
     // setUpdateToThreeArticles is used to stop further rendering
+    // I realize that its possible to just use .slice(0, 3) before mapping the component, but im trying new stuff.
     useEffect(() => {
        if (articlesContext) {
             getArticles(3)
@@ -22,7 +23,6 @@ const ArticleNews = () => {
             return () => clearArticles()
         }
     }, [updateToThreeArticles]);
-
 
     return (
         <section className="article-news">
@@ -35,7 +35,7 @@ const ArticleNews = () => {
                 </div>
                 <div className="content-news">
                     {
-                        articlesContext.map((article) => (
+                        articlesContext.slice(0, 3).map((article) => (
                             <Articles
                                 key={article.id}
                                 id={article.id}

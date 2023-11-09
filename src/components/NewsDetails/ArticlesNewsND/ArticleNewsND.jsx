@@ -29,7 +29,6 @@ const ArticleNewsND = () => {
     useEffect(() => {
         if (articlesContext) {
             setVisibleArticles(articlesContext.slice(0, articlesToShow));
-            console.log(articlesContext)
             if (articlesContext.length <= maxArticles) {
                 setButtonText('More Articles');
             }

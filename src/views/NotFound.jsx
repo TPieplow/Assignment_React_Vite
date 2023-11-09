@@ -1,21 +1,19 @@
 import React from 'react'
 import Footer from '#components/Home/Footer/Footer';
-
 import './NotFound.css';
-import cat from '#images/catpagenotfound.png';
+
 import Button from '#button';
 
 const NotFound = () => {
   return (
     <div className="wrapper">
-      {/* <h1>Page not found</h1> */}
-      <main>
-        <Button type="dark" url="/"/>
-        <img src={ cat } alt="A cat" />
+      <main className='mainNotFound'>
+        <div className='background'>
+          <h2></h2>
+          <Button className="btnNotFound" type="not-found" url="/" text="Go back"/>
+        </div>
       </main>
-      
       <Footer />
-      
     </div>
 
 
