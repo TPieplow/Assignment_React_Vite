@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import '../../Home/ArticleNews/ArticleNews.css';
 import './ArticlesNewsND.css';
-
 import Button from '#button';
 import SectionTitle from '#sectiontitle';
 import Articles from '../../../generics/Articles'
@@ -10,7 +9,7 @@ import { useArticlesContext } from '../../contexts/ArticleContext';
 
 
 const ArticleNewsND = () => {
-    const { articlesContext, getArticles, clearArticles, setArticlesContext } = useArticlesContext();
+    const { articlesContext, getArticles, clearArticles } = useArticlesContext();
     const maxArticles = 9;
     const articlesToShow = 3;
 
@@ -19,7 +18,6 @@ const ArticleNewsND = () => {
     const [buttonText, setButtonText] = useState('More Articles');
     const [visibleArticles, setVisibleArticles] = useState([]);
 
-    const showMoreRef = useRef(null);
 
     useEffect(() => {
         getArticles();
@@ -46,6 +44,7 @@ const ArticleNewsND = () => {
         }
         setLoading(false);
     };
+
 
     const handleShowLess = () => {
         setVisibleArticles(articlesContext.slice(0, articlesToShow));
@@ -82,7 +81,7 @@ const ArticleNewsND = () => {
                         )}
                 </div>
                 <div className="ring-container" onClick={buttonText === 'Show Less' ? handleShowLess : loadMoreArticles}>
-                    <Button ref={showMoreRef} type="dark" text={buttonText} />
+                    <Button  type="dark" text={buttonText} />
                 </div>
             </div>
         </section>

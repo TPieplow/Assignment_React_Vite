@@ -30,7 +30,7 @@ const ArticleNews = () => {
                 <div className="title-part">
                     <SectionTitle title="Article & News" description="Get Every Single Article & News" />
                     <div className="btn-box">
-                        <Button type="transparent" text="Browse Articles" url="/articles" />
+                        <Button type="transparent" text="Browse Articles" url="/news" />
                     </div>
                 </div>
                 <div className="content-news">

@@ -37,7 +37,7 @@ const AboutCompany = () => {
                             text="Learn More"
                             url="/about"
                         />
-                        <Link href="" className="btn-intro"> <i className="fa-thin fa-circle-play"></i>Intro Video</Link>
+                        <Link to="/videos" className="btn-intro"> <i className="fa-thin fa-circle-play"></i>Intro Video</Link>
                     </div>
                 </div>
             </div>
