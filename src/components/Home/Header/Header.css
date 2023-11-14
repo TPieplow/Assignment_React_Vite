@@ -26,6 +26,7 @@ header .container .mobile-menu {
   padding: 20px;
   background-color: #F9D783;
   z-index: 4;
+  overflow-y: scroll;
 }
 header .container .mobile-menu a {
   color: #191919;

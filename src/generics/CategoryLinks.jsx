@@ -13,14 +13,12 @@ const CategoryLinks = ({ category, id }) => {
 
   return (
     <div>
-
       {
         <Link key={id} to="/pageNotFound" className='category'>
           {category} <span className='posts'>{categoryInfo ? `- ${categoryInfo.posts} Posts` : ''}</span>
         </Link>
       }
     </div>
-
   )
 }
 
