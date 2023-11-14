@@ -196,6 +196,10 @@ section {
                 margin-bottom: 50px;
                 font-weight: 700;
                 color: gray;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                width: 390px;
 
                 .titleSidebar {
                     position: relative;
@@ -212,7 +216,8 @@ section {
                     }
                 }
 
-                span {
+                a {
+                    text-decoration: none;
                     color: #191919;
                 }
 
@@ -222,6 +227,10 @@ section {
                     font-size: 22px;
                     margin-bottom: 20px;
 
+                }
+
+                .posts {
+                    color: gray;
                 }
             }
         }

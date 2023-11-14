@@ -168,6 +168,10 @@ section .newscontents .searchBar .categories {
   margin-bottom: 50px;
   font-weight: 700;
   color: gray;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 390px;
 }
 section .newscontents .searchBar .categories .titleSidebar {
   position: relative;
@@ -182,7 +186,8 @@ section .newscontents .searchBar .categories .titleSidebar::after {
   height: 2px;
   background-color: black;
 }
-section .newscontents .searchBar .categories span {
+section .newscontents .searchBar .categories a {
+  text-decoration: none;
   color: #191919;
 }
 section .newscontents .searchBar .categories h5 {
@@ -190,4 +195,7 @@ section .newscontents .searchBar .categories h5 {
   font-weight: 700;
   font-size: 22px;
   margin-bottom: 20px;
+}
+section .newscontents .searchBar .categories .posts {
+  color: gray;
 }

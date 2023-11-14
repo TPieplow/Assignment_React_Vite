@@ -6,13 +6,13 @@ import { NewsContect } from '../../../generics/NewsContect'
 import './NewsContents.css'
 import { useArticlesContext } from '../../contexts/ArticleContext';
 import Category from '../../../generics/Category';
+import CategoryLinks from '../../../generics/CategoryLinks';
 
 
 
 const NewsContents = () => {
   const { articleContext, getArticle } = useArticlesContext();
   const { articlesContext, getArticles, clearArticles } = useArticlesContext();
-  // const [updateToThreeArticles, setUpdateToThreeArticles] = useState(true);
 
   const { id } = useParams();
 
@@ -25,11 +25,9 @@ const NewsContents = () => {
   useEffect(() => {
     if (articlesContext) {
       getArticles();
-      // setUpdateToThreeArticles(false);
       return () => clearArticles();
     }
   }, [articleContext])
-
 
   return (
     <section>
@@ -105,12 +103,15 @@ const NewsContents = () => {
             <div>
               <h5 className='titleSidebar'>Categories</h5>
             </div>
-            <p><span>Technology </span>- 20 posts</p>
-            <p><span>Freelancing</span> - 07 Posts</p>
-            <p><span>Writing</span> - 16 Posts</p>
-            <p><span>Marketing</span> - 11 Posts</p>
-            <p><span>Business</span> - 35 Posts</p>
-            <p><span>Education</span> - 14 Posts</p>
+            {
+              articlesContext.slice(0, 4).map((article) => (
+                <CategoryLinks
+                  key={article.id}
+                  category={article.category}
+
+                />
+              ))
+            }
           </div>
         </div>
       </div>

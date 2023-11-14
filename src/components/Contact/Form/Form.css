@@ -43,3 +43,6 @@
   font-weight: 500;
   color: #f70a0a;
 }
+.form-section .container form .input-error {
+  color: #f70a0a;
+}

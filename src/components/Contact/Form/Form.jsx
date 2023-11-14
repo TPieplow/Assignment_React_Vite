@@ -16,7 +16,7 @@ const Form = () => {
     }
 
     const alertBox = () => {
-        toast.error("Couldnt submit form")
+        toast.error("Couldn't submit form")
     }
  
     const regexEmail = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,4})+$/
