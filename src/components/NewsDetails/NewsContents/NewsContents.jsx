@@ -92,6 +92,7 @@ const NewsContents = () => {
               articlesContext.slice(0, 4).map((article) => (
                 <Category
                   key={article.id}
+                  id={article.id}
                   title={article.title}
                   published={article.published}
                 />
@@ -106,8 +107,8 @@ const NewsContents = () => {
               articlesContext.slice(0, 4).map((article) => (
                 <CategoryLinks
                   key={article.id}
+                  id={article.id}
                   category={article.category}
-
                 />
               ))
             }

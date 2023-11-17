@@ -45,7 +45,6 @@ const ArticleNewsND = () => {
         setLoading(false);
     };
 
-
     const handleShowLess = () => {
         setVisibleArticles(articlesContext.slice(0, articlesToShow));
         setButtonText('More Articles');

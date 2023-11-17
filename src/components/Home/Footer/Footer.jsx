@@ -12,8 +12,8 @@ const Footer = () => {
     {
       title: 'Company',
       links: [
-        { text: 'About', url: '/'},
-        { text: 'Features', url: '/'},
+        { text: 'About', url: '/home'},
+        { text: 'Features', url: '/home'},
         { text: 'Works', url: '/'},
         { text: 'Career', url: '/'},
       ],
@@ -21,7 +21,7 @@ const Footer = () => {
     {
       title: 'Help',
       links: [
-        { text: 'Customer Support', url: '/'},
+        { text: 'Customer Support', url: '/contact'},
         { text: 'Delivery Details', url: '/'},
         { text: 'Terms & Conditions', url: '/'},
         { text: 'Privacy Policy', url: '/'},

@@ -48,7 +48,7 @@ const Form = () => {
                 },
                 body: JSON.stringify(values)
             })
-
+            // ok instead of 200 since it covers the whole 200-section.
             if (result.ok) {
                 succesBox();
 
