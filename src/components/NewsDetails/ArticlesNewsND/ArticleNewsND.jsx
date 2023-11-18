@@ -18,7 +18,6 @@ const ArticleNewsND = () => {
     const [buttonText, setButtonText] = useState('More Articles');
     const [visibleArticles, setVisibleArticles] = useState([]);
 
-
     useEffect(() => {
         getArticles();
         return () => clearArticles();
@@ -80,7 +79,7 @@ const ArticleNewsND = () => {
                         )}
                 </div>
                 <div className="ring-container" onClick={buttonText === 'Show Less' ? handleShowLess : loadMoreArticles}>
-                    <Button  type="dark" text={buttonText} />
+                    <Button type="dark" text={buttonText} />
                 </div>
             </div>
         </section>
@@ -88,9 +87,4 @@ const ArticleNewsND = () => {
 
 };
 
-export default ArticleNewsND
-
-
-
-
-
+export default ArticleNewsND;
