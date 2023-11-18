@@ -1,7 +1,7 @@
 # Frontend - JavaScript assignment with React utilizing Vite
 
 ## Description
-- This application is a component of my edjucational journey toward becoming a fullstack .NET developer. It constitutes the second assignment in the program and has been entirely devoloped in React, utilizing Vite. 
+- This application is a part of my edjucational journey toward becoming a fullstack .NET developer. It constitutes the second assignment in the program and has been entirely devoloped in React, utilizing Vite. 
 
 ## Installation
 ```bash
