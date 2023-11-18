@@ -18,7 +18,7 @@ const Form = () => {
     const alertBox = () => {
         toast.error("Couldn't submit form")
     }
- 
+
     const regexEmail = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,4})+$/
     const { handleChange, handleBlur, handleSubmit, isSubmitting, errors, touched, values } = useFormik({
         initialValues: {

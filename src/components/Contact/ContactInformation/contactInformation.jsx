@@ -16,11 +16,11 @@ const ContactInformation = () => {
                 {
                     contactBoxes.map((contactBox, index) =>
                         <ContactInfo
-                            key={index}
-                            iconClass={contactBox.iconClass}
-                            title={contactBox.title}
-                            desciption={contactBox.desciption}
-                            secondDescription={contactBox.secondDescription}
+                            key={ index }
+                            iconClass={ contactBox.iconClass }
+                            title={ contactBox.title }
+                            desciption={ contactBox.desciption }
+                            secondDescription={ contactBox.secondDescription }
                         />
                     )
                 }

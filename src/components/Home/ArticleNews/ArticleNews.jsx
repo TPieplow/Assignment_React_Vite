@@ -12,12 +12,11 @@ const ArticleNews = () => {
     const { articlesContext, getArticles, clearArticles } = useArticlesContext();
     const [updateToThreeArticles, setUpdateToThreeArticles] = useState(true);
 
-    // Context got a limit variable, which let us call a certain number of articles to display
+    // Context got a limit variable, which calls a certain number of articles to display
     // getArticles(3) fetches 3 articles instead of the whole array
     // setUpdateToThreeArticles is used to stop further rendering
-    // I realize that its possible to just use .slice(0, 3) before mapping the component, but im trying new stuff.
     useEffect(() => {
-       if (articlesContext) {
+        if (articlesContext) {
             getArticles(3)
             setUpdateToThreeArticles(false)
             return () => clearArticles()

@@ -6,16 +6,12 @@ import ArticleNews from '../../../generics/ArticleNews';
 import ImageCarousel from './ImgCarousel';
 
 
-
 const ArticleNewsNews = () => {
-    // const { articlesContext, clearArticlesContext } = useArticlesContext()
-    // const {id} = useParams()
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
         getArticles()
 
-        // return () => clearArticles()
     }, []);
 
     const getArticles = async () => {

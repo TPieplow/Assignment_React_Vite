@@ -10,8 +10,6 @@ import { useArticlesContext } from '../../contexts/ArticleContext';
 
 const ArticleNewsNews = () => {
     const { articlesContext, getArticles, clearArticles } = useArticlesContext()
-    // const {id} = useParams()
-    // const [articles, setArticles] = useState([]);
 
     useEffect(() => {
         getArticles()
@@ -39,11 +37,11 @@ const ArticleNewsNews = () => {
                                 category={article.category}
                             />
                         ))
-                    ) 
-                    :
-                    (
-                        <p>No available articles</p>
-                    )}
+                    )
+                        :
+                        (
+                            <p>No available articles</p>
+                        )}
                 </div>
                 <div className="chevron-slider">
                     <div className="chevron chevron-left" id="prev">&lt;</div>

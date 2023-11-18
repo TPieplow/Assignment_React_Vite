@@ -41,15 +41,15 @@ const ImageCarousel = () => {
   return (
     <div>
       <div className="chevron-slider">
-        
 
-        </div>
-        <div className="slider" id="slider">
-          {generateSlides()}
-        </div>
-        
 
-        </div>
+      </div>
+      <div className="slider" id="slider">
+        {generateSlides()}
+      </div>
+
+
+    </div>
 
   );
 };

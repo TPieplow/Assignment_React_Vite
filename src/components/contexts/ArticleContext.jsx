@@ -13,6 +13,7 @@ export const ArticleProvider = ({ children }) => {
         getArticles()
     }, [])
 
+    // Fetching from API, using a limit variable and slicing to get a chosen number of articles.
     const getArticles = async (limit) => {
         try {
             const result = await fetch(apiUrlGet)
@@ -29,6 +30,7 @@ export const ArticleProvider = ({ children }) => {
         }
     }
 
+    // Fetching a single article given the id
     const getArticle = async (id) => {
         try {
             const result = await fetch(`${apiUrlGet}/${id}`)
@@ -42,13 +44,14 @@ export const ArticleProvider = ({ children }) => {
         }
     }
 
+    // Clear/refresh articles when redering the page 
     const clearArticles = () => {
         setArticlesContext([])
     }
 
     return (
         <ArticleContext.Provider value={{ articlesContext, getArticles, articleContext, getArticle, clearArticles }}>
-            { children }
+            {children}
         </ArticleContext.Provider>
     )
 }

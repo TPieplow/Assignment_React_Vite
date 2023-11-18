@@ -8,6 +8,7 @@ import martino_logo from '#images/martino-logo.svg';
 import square_logo from '#images/square-logo.svg';
 import gobona_logo from '#images/gobona-logo.svg';
 
+// Array containing objects to display and map the brand logos
 const BrandsBox = () => {
     const brands = [
         { img: paper_logo, altText: "logotype paper" },

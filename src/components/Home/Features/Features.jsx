@@ -6,6 +6,7 @@ import Button from '#button';
 import SectionTitle from '#sectiontitle';
 
 const Features = () => {
+    // Array with objects to display icons
     const features = [
         { iconClass: "fa-light fa-handshake", title: "Business Advice", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."},
         { iconClass: "fa-sharp fa-regular fa-lightbulb-exclamation-on", title: "Startup Business", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."},

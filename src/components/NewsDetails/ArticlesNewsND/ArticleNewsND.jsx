@@ -10,19 +10,23 @@ import { useArticlesContext } from '../../contexts/ArticleContext';
 
 const ArticleNewsND = () => {
     const { articlesContext, getArticles, clearArticles } = useArticlesContext();
+    // Since the API only contains 9 articles, that's the max number, then we display 3 articles at a time
     const maxArticles = 9;
     const articlesToShow = 3;
 
+    // Use state to handle the state on the page, load status and visable articles
     const [loading, setLoading] = useState(false);
     const [showLessClicked, setShowLessClicked] = useState(false);
     const [buttonText, setButtonText] = useState('More Articles');
     const [visibleArticles, setVisibleArticles] = useState([]);
 
+    // Updates visable articles when rendering the page
     useEffect(() => {
         getArticles();
         return () => clearArticles();
     }, []);
 
+    // Updates the button depending on the number of visable articles
     useEffect(() => {
         if (articlesContext) {
             setVisibleArticles(articlesContext.slice(0, articlesToShow));
@@ -32,6 +36,7 @@ const ArticleNewsND = () => {
         }
     }, [articlesContext]);
 
+    // Use spread operator to add new articles then the button is clicked
     const loadMoreArticles = () => {
         setLoading(true);
         const remainingArticles = articlesContext.slice(visibleArticles.length, maxArticles);
@@ -44,6 +49,7 @@ const ArticleNewsND = () => {
         setLoading(false);
     };
 
+    // Restore visable articles and the button text when "show less" is clicked
     const handleShowLess = () => {
         setVisibleArticles(articlesContext.slice(0, articlesToShow));
         setButtonText('More Articles');

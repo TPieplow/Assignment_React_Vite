@@ -8,6 +8,7 @@ import img_whiteLines from '#images/background_lines_white_right.svg';
 import FooterLinks from '../../../generics/FooterLinks';
 
 const Footer = () => {
+  // Array with objects, where links is an array containing another object
   const footerLinks = [
     {
       title: 'Company',

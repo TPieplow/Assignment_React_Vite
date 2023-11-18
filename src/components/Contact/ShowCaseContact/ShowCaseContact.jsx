@@ -10,10 +10,10 @@ const ShowCaseContact = () => {
     return (
         showcases.map((showcase, index) => (
             <Showcases
-                key={ index }
-                title={ showcase.title }
-                url={ showcase.url }
-                urlName={ showcase.urlName }
+                key={index}
+                title={showcase.title}
+                url={showcase.url}
+                urlName={showcase.urlName}
             />
         ))
     )
